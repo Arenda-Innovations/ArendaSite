@@ -222,6 +222,7 @@ const VideoCarousel = () => {
           <img
             src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
             alt={isLastVideo ? "replay" : !isPlaying ? "play" : "pause"}
+            className="w-10 h-10"
             onClick={
               isLastVideo
                 ? () => handleProcess("video-reset")
