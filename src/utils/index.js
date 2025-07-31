@@ -20,6 +20,15 @@ export const highlightThirdVideo = highlightThirdmv;
 export const highlightFourthVideo = highlightFourthmv;
 export const exploreVideo = exploremv;
 export const frameVideo = framemv;
+
+
+
+
+
+
+
+
+
 export const pauseImg = pause;//replace these images with 
 export const playImg = pause;
 export const replayImg = pause;
