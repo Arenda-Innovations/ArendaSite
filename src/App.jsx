@@ -4,14 +4,16 @@ import Navbar from './components/Navbar';
 import VideoCarousel from './components/VideoCarousel';
 import Footer from './components/Footer';
 import BeltOfCollabs from './components/BeltOfCollabs';
-
+import ResearchPage from './components/ResearchPage';
 const App = () => {
   return (
     <main className='bg-black'>
       <Navbar />
       <Hero />
-      <BeltOfCollabs/>
+      
       <VideoCarousel />
+      <ResearchPage />
+      <BeltOfCollabs/>
       <Footer />
     </main>
   );
