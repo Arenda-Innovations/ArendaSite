@@ -10,6 +10,7 @@ import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
 import exploremv from "/assets/videos/explore.mp4";
 import framemv from "/assets/videos/frame.mp4";
 import pause from "/assets/react.svg";
+import ArendaLogo from "/assets/ArendaLogo.svg"
 
 
 export const heroVideo = hmv;
@@ -20,6 +21,6 @@ export const highlightThirdVideo = highlightThirdmv;
 export const highlightFourthVideo = highlightFourthmv;
 export const exploreVideo = exploremv;
 export const frameVideo = framemv;
-export const pauseImg = pause;//replace these images with 
-export const playImg = pause;
-export const replayImg = pause;
+export const pauseImg = ArendaLogo;//replace these images with 
+export const playImg = ArendaLogo;
+export const replayImg = ArendaLogo;

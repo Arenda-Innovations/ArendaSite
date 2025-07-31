@@ -18,33 +18,35 @@ export const hightlightsSlides = [
   {
     id: 1,
     textLists: [
-      "Enter A17 Pro.",
-      "Game‑changing chip.",
-      "Groundbreaking performance.",
+      "BlurOS",
+      "The Future of Operating Systems",
+      "Kernel level AI control",
     ],
     video: highlightFirstVideo,
     videoDuration: 4,
   },
   {
     id: 2,
-    textLists: ["Titanium.", "So strong. So light. So Pro."],
+    textLists: ["BrAIn AI", "Do it all", "With a single word"],
     video: highlightSecondVideo,
     videoDuration: 5,
   },
   {
     id: 3,
     textLists: [
-      "iPhone 15 Pro Max has the",
-      "longest optical zoom in",
-      "iPhone ever. Far out.",
+      "Allz Well",
+      "Know Your Brain",
+      "Know it First",
     ],
     video: highlightThirdVideo,
     videoDuration: 2,
   },
   {
     id: 4,
-    textLists: ["All-new Action button.", "What will yours do?."],
+    textLists: ["HomeFax", "Its your home", "Its your right"],
     video: highlightFourthVideo,
     videoDuration: 3.63,
   },
 ];
+
+export const researchPageContent = ['Arenda Research', 'At Arenda, we believe in pushing the boundaries of science and technology. Our students work on novel, high-impact STEM projects that shape the future.', 'From AI to advanced hardware, our mission is to guide students into becoming world-class innovators and builders—starting with first principles and aiming for mastery.'];

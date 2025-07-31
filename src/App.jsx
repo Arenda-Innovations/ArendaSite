@@ -2,6 +2,7 @@ import * as Sentry from '@sentry/react';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import VideoCarousel from './components/VideoCarousel';
+import ArendaResearch from './components/ResearchPage';
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       
       <Navbar />
       <Hero />
-      <><VideoCarousel /></>
+      <VideoCarousel />
+      <ArendaResearch />
       
     </main>
   )
