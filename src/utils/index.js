@@ -9,8 +9,7 @@ import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
 import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
 import exploremv from "/assets/videos/explore.mp4";
 import framemv from "/assets/videos/frame.mp4";
-import pause from "/assets/react.svg";
-import ArendaLogo from "/assets/ArendaLogo.svg"
+import ArendaLogo from "/assets/images/ArendaLogo.svg"
 
 
 export const heroVideo = hmv;

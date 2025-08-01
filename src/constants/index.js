@@ -59,9 +59,33 @@ export const footerLinks = [
 ];
 
 
-
-
-
-
-
 export const researchPageContent = ['Arenda Research', 'At Arenda, we believe in pushing the boundaries of science and technology. Our students work on novel, high-impact STEM projects that shape the future.', 'From AI to advanced hardware, our mission is to guide students into becoming world-class innovators and builders—starting with first principles and aiming for mastery.'];
+
+
+
+
+
+const projects = [
+  {
+    imageURL: "/assets/images/ArendaLogo.svg",
+    title: "React Project",
+    description: "A frontend app built with React.",
+  },
+  {
+    imageURL: "/assets/images/react.svg",
+    title: "Vue Project",
+    description: "An application using Vue.js.",
+  },
+  {
+    imageURL: "/assets/images/ArendaLogo.svg",
+    title: "Angular Project",
+    description: "An Angular web app.",
+  },
+  {
+    imageURL: "/assets/images/react.svg",
+    title: "Svelte Project",
+    description: "Fast and lightweight Svelte app.",
+  },
+];
+
+export  {projects} ;
