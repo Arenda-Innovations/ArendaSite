@@ -19,8 +19,8 @@ const ProjectBox = ({ imageURL, title, description, className = "" }) => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 80%", // when top of element hits 80% of viewport height
-          toggleActions: "play none none none", // only play once
+          start: "top 80%", 
+          toggleActions: "play none none none", 
         },
       }
     );
