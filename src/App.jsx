@@ -9,15 +9,16 @@ import ResearchPage from './components/ResearchPage';
 import ProjectBento from './components/ProjectBento';
 const App = () => {
   return (
-    <main className='bg-black'>
+    <>
       <Navbar/>
       <Hero/>
       <VideoCarousel/>
       <ResearchPage/>
       <BeltOfCollabs/>
-      <Footer/>
       <ProjectBento/>
-    </main>
+      <Footer/>
+      
+    </>
   );
 };
 
