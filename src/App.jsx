@@ -4,16 +4,21 @@ import Navbar from './components/Navbar';
 import VideoCarousel from './components/VideoCarousel';
 import Footer from './components/Footer';
 import BeltOfCollabs from './components/BeltOfCollabs';
+import ResearchPage from './components/ResearchPage';
 
+import ProjectBento from './components/ProjectBento';
 const App = () => {
   return (
-    <main className='bg-black'>
-      <Navbar />
-      <Hero />
+    <>
+      <Navbar/>
+      <Hero/>
+      <VideoCarousel/>
+      <ResearchPage/>
       <BeltOfCollabs/>
-      <VideoCarousel />
-      <Footer />
-    </main>
+      <ProjectBento/>
+      <Footer/>
+      
+    </>
   );
 };
 

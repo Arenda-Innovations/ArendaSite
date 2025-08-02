@@ -6,7 +6,7 @@ const Navbar = () => {
 
       <nav className="flex w-full max-w-screen-xl mx-auto">
         
-        <img src="/assets/react.svg" alt="Logo" width={24} height={28} />
+        <img src="public/assets/images/ArendaLogo.svg" alt="Logo" width={24} height={28} />
         <div className="flex flex-1 justify-center max-sm:hidden">
           {navLists.map((nav) => (
             <div key={nav} className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">
