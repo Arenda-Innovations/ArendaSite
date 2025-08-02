@@ -69,12 +69,12 @@ const projects = [
   {
     imageURL: "/assets/images/ArendaLogo.svg",
     title: "React Project",
-    description: "A frontend app built with React.",
+    description: "A frontend app React.",
   },
   {
     imageURL: "/assets/images/react.svg",
     title: "Vue Project",
-    description: "An application using Vue.js.",
+    description: "An Vue.js. App",
   },
   {
     imageURL: "/assets/images/ArendaLogo.svg",
@@ -84,7 +84,7 @@ const projects = [
   {
     imageURL: "/assets/images/react.svg",
     title: "Svelte Project",
-    description: "Fast and lightweight Svelte app.",
+    description: "ASvelte app.",
   },
 ];
 
