@@ -28,6 +28,7 @@ const ProjectBox = ({ imageURL, title, description, className = "" }) => {
 
   return (
     <div
+      id="project-box"
       ref={boxRef}
       className={`w-full h-[250px] max-w-2xl mx-auto rounded-2xl border border-gray-500 p-4 bg-black flex items-center space-x-4 
       transition-shadow duration-300 shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.9)] ${className}`}

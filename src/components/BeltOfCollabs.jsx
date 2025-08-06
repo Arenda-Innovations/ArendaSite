@@ -5,6 +5,7 @@ import React from 'react';
 const BeltOfCollabs = () => {
     return (
         <div
+        id="belt-of-collabs"
       className="flex items-center justify-around"
       style={{
         width: '200%',

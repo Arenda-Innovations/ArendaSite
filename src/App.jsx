@@ -9,7 +9,7 @@ import ResearchPage from './components/ResearchPage';
 import ProjectBento from './components/ProjectBento';
 const App = () => {
   return (
-    <>
+    <body className="scroll-smooth">
       <Navbar/>
       <Hero/>
       <VideoCarousel/>
@@ -18,7 +18,7 @@ const App = () => {
       <ProjectBento/>
       <Footer/>
       
-    </>
+    </body>
   );
 };
 

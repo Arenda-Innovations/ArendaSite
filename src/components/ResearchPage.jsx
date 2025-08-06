@@ -28,7 +28,7 @@ const ArendaResearch = () => {
   }, []);
 
   return (
-    <section className="bg-black text-white py-20 px-6 md:px-12">
+    <section className="bg-black text-white py-20 px-6 md:px-12" id="research-page">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-semibold text-center mb-12 relative">
           <span className="relative z-10">Arenda Research</span>
