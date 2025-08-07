@@ -28,8 +28,26 @@ const Navbar = () => {
                     {nav}
                   </div>
                 </Link>
-              ) : nav === "Founder" ? (
+              ) : nav === "Founders" ? (
                 <Link to="/founder">
+                  <div className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">
+                    {nav}
+                  </div>
+                </Link>
+              ) : nav === "A.I." ? (
+                <Link to="/ai">
+                  <div className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">
+                    {nav}
+                  </div>
+                </Link>
+              ) : nav === "Engineering" ? (
+                <Link to="/engineering">
+                  <div className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">
+                    {nav}
+                  </div>
+                </Link>
+              ) : nav === "Social Impact" ? (
+                <Link to="/social-impact">
                   <div className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">
                     {nav}
                   </div>

@@ -9,6 +9,9 @@ import ResearchPage from './components/ResearchPage';
 import ContactForm from './components/ContactForm';
 import ContactPage from './components/Pages/ContactPage';
 import FounderPage from './components/Pages/FounderPage';
+import AIPage from './components/Pages/AIPage';
+import EngineeringPage from './components/Pages/EngineeringPage';
+import SocialImpactPage from './components/Pages/SocialImpactPage';
 import ProjectBento from './components/ProjectBento';
 
 const App = () => {
@@ -22,11 +25,14 @@ const App = () => {
             <VideoCarousel/>
             <ResearchPage/>
             <BeltOfCollabs/>
-            <ProjectBento/>
+            
           </>
         } />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/founder" element={<FounderPage />} />
+        <Route path="/ai" element={<AIPage />} />
+        <Route path="/engineering" element={<EngineeringPage />} />
+        <Route path="/social-impact" element={<SocialImpactPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer/>

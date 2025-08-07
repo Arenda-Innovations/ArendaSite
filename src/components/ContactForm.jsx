@@ -25,25 +25,17 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setErrorMessage('');
     setSuccessMessage('');
-
-    try {
-      // Form submission logic - replace with your preferred solution
-      console.log('Form submitted:', formData);
-      
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSuccessMessage('Message sent successfully!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSuccessMessage(''), 5000);
-    } catch (error) {
-      console.error('Error sending form:', error);
-      setErrorMessage('Failed to send message. Please try again.');
-      setTimeout(() => setErrorMessage(''), 5000);
-    } finally {
+  
+    // Simulate delay
+    setTimeout(() => {
       setIsSubmitting(false);
-    }
+      setSuccessMessage('Sent successfully!');
+      
+      // Optionally reset the form data
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 2000);
   };
+  
 
   return (
     <div className="flex h-screen px-8 py-12 gap-8 bg-black">
