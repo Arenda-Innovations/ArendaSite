@@ -11,6 +11,7 @@ import exploremv from "/assets/videos/explore.mp4";
 import framemv from "/assets/videos/frame.mp4";
 import pause from "/assets/react.svg";
 import ArendaLogo from "/assets/ArendaLogo.svg"
+import UCALOGO from "/assets/UCALOGO.jpg";
 
 
 export const heroVideo = hmv;
@@ -24,3 +25,4 @@ export const frameVideo = framemv;
 export const pauseImg = ArendaLogo;//replace these images with 
 export const playImg = ArendaLogo;
 export const replayImg = ArendaLogo;
+export const UCA = UCALOGO;
