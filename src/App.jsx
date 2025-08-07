@@ -17,7 +17,7 @@ import ProjectBento from './components/ProjectBento';
 const App = () => {
   return (
     <div className="scroll-smooth">
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={
           <>
