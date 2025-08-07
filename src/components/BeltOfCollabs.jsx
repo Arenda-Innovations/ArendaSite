@@ -18,7 +18,7 @@ const BeltOfCollabs = () => {
       {Array.from({ length: 12 }).map((_, index) => (
         <img
           key={index}
-          src="public/assets/images/react.svg"
+          src="/assets/images/react.svg"
           alt="University Logo"
           style={{
             height:

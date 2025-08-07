@@ -26,12 +26,12 @@ const ContactForm = () => {
     setErrorMessage('');
     setSuccessMessage('');
   
-    // Simulate delay
+    
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccessMessage('Sent successfully!');
       
-      // Optionally reset the form data
+      
       setFormData({ name: '', email: '', subject: '', message: '' });
     }, 2000);
   };
