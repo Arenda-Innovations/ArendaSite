@@ -30,7 +30,7 @@ const Navbar = () => {
 
   const renderNavLink = (nav, isMobile = false) => {
     const baseClasses = "px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all";
-    const mobileClasses = "px-8 py-4 text-lg cursor-pointer text-white hover:text-blue transition-all border-b border-gray-700 last:border-b-0";
+    const mobileClasses = "px-8 py-4 text-lg cursor-pointer text-gray-500 hover:text-white transition-all border-b border-gray-700 last:border-b-0";
     
     const classes = isMobile ? mobileClasses : baseClasses;
     
