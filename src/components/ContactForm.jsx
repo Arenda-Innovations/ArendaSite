@@ -27,7 +27,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex h-screen px-8 py-12 gap-8">
+    <div className="flex h-screen px-8 py-12 gap-8 bg-black">
       {/* Left - Form */}
       <div className="w-[48%] bg-white p-10 flex flex-col justify-center rounded-3xl shadow-xl">
         <h2 className="text-3xl font-semibold text-zinc-800 mb-6">Get in Touch</h2>
