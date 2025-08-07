@@ -28,6 +28,12 @@ const Navbar = () => {
                     {nav}
                   </div>
                 </Link>
+              ) : nav === "Founder" ? (
+                <Link to="/founder">
+                  <div className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">
+                    {nav}
+                  </div>
+                </Link>
               ) : (
                 <a href={`#${nav.toLowerCase()}`}>
                   <div className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all">

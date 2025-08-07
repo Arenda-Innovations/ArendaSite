@@ -1,4 +1,4 @@
-import ContactForm from './ContactForm';
+import ContactForm from '../ContactForm';
 
 const ContactPage = () => {
   return (
@@ -7,5 +7,4 @@ const ContactPage = () => {
     </div>
   );
 };
-
 export default ContactPage; 

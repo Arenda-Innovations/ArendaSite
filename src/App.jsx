@@ -1,5 +1,5 @@
 import * as Sentry from '@sentry/react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import VideoCarousel from './components/VideoCarousel';
@@ -7,12 +7,13 @@ import Footer from './components/Footer';
 import BeltOfCollabs from './components/BeltOfCollabs';
 import ResearchPage from './components/ResearchPage';
 import ContactForm from './components/ContactForm';
-import ContactPage from './components/ContactPage';
+import ContactPage from './components/Pages/ContactPage';
+import FounderPage from './components/Pages/FounderPage';
 import ProjectBento from './components/ProjectBento';
 
 const App = () => {
   return (
-    <body className="scroll-smooth">
+    <div className="scroll-smooth">
       <Navbar/>
       <Routes>
         <Route path="/" element={
@@ -24,12 +25,12 @@ const App = () => {
             <ProjectBento/>
           </>
         } />
-        <Route path="/contact" 
-        element={<ContactPage />} 
-        />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/founder" element={<FounderPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer/>
-    </body>
+    </div>
   );
 };
 

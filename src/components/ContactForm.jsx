@@ -9,6 +9,8 @@ const ContactForm = () => {
   });
 
   const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,12 +20,29 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
-    setSuccessMessage('Sent Successfully');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setTimeout(() => setSuccessMessage(''), 5000);
+    setIsSubmitting(true);
+    setErrorMessage('');
+    setSuccessMessage('');
+
+    try {
+      // Form submission logic - replace with your preferred solution
+      console.log('Form submitted:', formData);
+      
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setSuccessMessage('Message sent successfully!');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSuccessMessage(''), 5000);
+    } catch (error) {
+      console.error('Error sending form:', error);
+      setErrorMessage('Failed to send message. Please try again.');
+      setTimeout(() => setErrorMessage(''), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -44,7 +63,8 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500"
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500 disabled:opacity-50"
             />
           </div>
 
@@ -60,7 +80,8 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500"
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500 disabled:opacity-50"
             />
           </div>
 
@@ -76,7 +97,8 @@ const ContactForm = () => {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500"
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500 disabled:opacity-50"
             />
           </div>
 
@@ -92,7 +114,8 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500"
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-xl bg-zinc-100 border border-zinc-300 text-black focus:outline-none focus:ring-2 focus:ring-zinc-500 disabled:opacity-50"
             />
           </div>
 
@@ -100,11 +123,15 @@ const ContactForm = () => {
             {successMessage && (
               <p className="text-green-600 font-medium text-sm">{successMessage}</p>
             )}
+            {errorMessage && (
+              <p className="text-red-600 font-medium text-sm">{errorMessage}</p>
+            )}
             <button
               type="submit"
-              className="px-5 py-2 rounded-xl bg-black text-white hover:bg-zinc-700 transition font-semibold"
+              disabled={isSubmitting}
+              className="px-5 py-2 rounded-xl bg-black text-white hover:bg-zinc-700 transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </div>
         </form>
