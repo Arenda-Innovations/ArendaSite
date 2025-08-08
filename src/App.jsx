@@ -14,6 +14,7 @@ import EngineeringPage from './components/Pages/EngineeringPage';
 import SocialImpactPage from './components/Pages/SocialImpactPage';
 import ProjectBento from './components/ProjectBento';
 
+
 const App = () => {
   return (
     <div className="scroll-smooth">
@@ -22,10 +23,9 @@ const App = () => {
         <Route path="/" element={
           <>
             <Hero/>
-            <VideoCarousel/>
             <ResearchPage/>
             <BeltOfCollabs/>
-            
+            <VideoCarousel/>
           </>
         } />
         <Route path="/contact" element={<ContactPage />} />

@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), sentryVitePlugin({
-    authToken: process.env.VITE_SENTRY_AUTH_TOKEN || process.env.SENTRY_AUTH_TOKEN,
+    authToken: process.env.SENTRY_AUTH_TOKEN,
     org: "arenda-innovations",
     project: "javascript-react",
     telemetry: false, // optional, disables Sentry usage tracking

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { submitContactToAppsScript } from './FormSubmitFunction';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,15 +26,28 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setErrorMessage('');
     setSuccessMessage('');
-  
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSuccessMessage('Sent successfully!');
-      
-      
+
+    try {
+      const result = await submitContactToAppsScript({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      });
+
+      if (!result.ok) {
+        throw new Error(`HTTP ${result.status}`);
+      }
+
+      setSuccessMessage('Thank you! Form is submitted');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 2000);
+      window.location.reload();
+    } catch (err) {
+      console.error('Error!', err);
+      setErrorMessage('Failed to submit form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
 
@@ -129,7 +143,7 @@ const ContactForm = () => {
         </form>
       </div>
 
-      
+      {/* Right - Info */}
       <div className="w-[48%] bg-gray-200 p-10 flex flex-col justify-center rounded-3xl shadow-xl">
         <h3 className="text-2xl font-semibold text-zinc-800 mb-4">Why Contact Us?</h3>
         <p className="text-zinc-700 text-sm leading-relaxed">
@@ -142,13 +156,6 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-
-
-
-
-
-
 
 
 

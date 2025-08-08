@@ -25,7 +25,15 @@ const Footer = () => {
   <div className="screen-max-width">
     <div className="flex md:flex-row flex-col md:items-center justify-between">
       <p className="font-semibold text-gray text-xs">
-        Copyright © 2025 Arenda. All rights reserved.
+        Copyright © 2025 Arenda. Designed by:{' '}
+        <a 
+          href="https://github.com/nischalkeshav" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="underline text-blue hover:text-blue-600 transition-colors"
+        >
+          Nischal Keshav
+        </a>
       </p>
       <div className="flex flex-wrap">
         {footerLinks.map((link, i) => (

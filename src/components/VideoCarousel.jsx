@@ -13,6 +13,8 @@ import { pauseImg, playImg, replayImg } from "../utils";
 
 
 const VideoCarousel = () => {
+  const containerRef = useRef(null);
+  const sliderTrackRef = useRef(null);
   const videoRef = useRef([]);
   const videoSpanRef = useRef([]);
   const videoDivRef = useRef([]);
@@ -29,29 +31,29 @@ const VideoCarousel = () => {
   const [loadedData, setLoadedData] = useState([]);
   const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
 
-  useGSAP(() => {
-    // slider animation to move the video out of the screen and bring the next video in
-    gsap.to("#slider", {
-      transform: `translateX(${-100 * videoId}%)`,
-      duration: 2,
-      ease: "power2.inOut", // show visualizer https://gsap.com/docs/v3/Eases
-    });
+  useGSAP(
+    () => {
+      if (sliderTrackRef.current) {
+        gsap.to(sliderTrackRef.current, {
+          xPercent: -100 * videoId,
+          duration: 2,
+          ease: "power2.inOut",
+        });
+      }
 
-    // video animation to play the video when it is in the view
-    gsap.to("#video", {
-      scrollTrigger: {
-        trigger: "#video",
-        toggleActions: "restart none none none",
-      },
-      onComplete: () => {
-        setVideo((pre) => ({
-          ...pre,
-          startPlay: true,
-          isPlaying: true,
-        }));
-      },
-    });
-  }, [isEnd, videoId]);
+      const currentVideoEl = videoRef.current[videoId];
+      if (currentVideoEl) {
+        ScrollTrigger.create({
+          trigger: currentVideoEl,
+          toggleActions: "restart none none none",
+          onEnter: () => {
+            setVideo((pre) => ({ ...pre, startPlay: true, isPlaying: true }));
+          },
+        });
+      }
+    },
+    { scope: containerRef, dependencies: [isEnd, videoId] }
+  );
 
   useEffect(() => {
     let currentProgress = 0;
@@ -104,10 +106,13 @@ const VideoCarousel = () => {
 
       // update the progress bar
       const animUpdate = () => {
-        anim.progress(
-          videoRef.current[videoId].currentTime /
-            hightlightsSlides[videoId].videoDuration
-        );
+        const videoEl = videoRef.current[videoId];
+        if (!videoEl) return; 
+
+        const durationFallback =
+          hightlightsSlides[videoId]?.videoDuration || videoEl.duration || 1;
+        const currentTime = videoEl.currentTime || 0;
+        anim.progress(currentTime / durationFallback);
       };
 
       if (isPlaying) {
@@ -117,18 +122,42 @@ const VideoCarousel = () => {
         // remove the ticker when the video is paused (progress bar is stopped)
         gsap.ticker.remove(animUpdate);
       }
+
+      // ensure ticker is cleaned up when effect re-runs or unmounts
+      return () => {
+        gsap.ticker.remove(animUpdate);
+      };
     }
   }, [videoId, startPlay]);
 
   useEffect(() => {
     if (loadedData.length > 3) {
+      const currentVideo = videoRef.current[videoId];
+      if (!currentVideo) return;
+
       if (!isPlaying) {
-        videoRef.current[videoId].pause();
+        currentVideo.pause();
       } else {
-        startPlay && videoRef.current[videoId].play();
+        if (startPlay) currentVideo.play();
       }
     }
   }, [startPlay, videoId, isPlaying, loadedData]);
+
+  // Pause/resume video when page/tab visibility changes
+  useEffect(() => {
+    const onVisibility = () => {
+      const currentVideo = videoRef.current[videoId];
+      if (!currentVideo) return;
+      if (document.hidden) {
+        currentVideo.pause();
+      } else if (isPlaying && startPlay) {
+        currentVideo.play();
+      }
+    };
+
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => document.removeEventListener('visibilitychange', onVisibility);
+  }, [videoId, isPlaying, startPlay]);
 
   // vd id is the id for every video until id becomes number 3
   const handleProcess = (type, i) => {
@@ -161,19 +190,18 @@ const VideoCarousel = () => {
   const handleLoadedMetaData = (i, e) => setLoadedData((pre) => [...pre, e]);
 
   return (
-    <div id="video-carousel">
-      <div className="flex items-center">
+    <div id="video-carousel" ref={containerRef}>
+      <div className="flex items-center" ref={sliderTrackRef}>
         {hightlightsSlides.map((list, i) => (
-          <div key={list.id} id="slider" className="sm:pr-20 pr-10">
+          <div key={list.id} className="sm:pr-20 pr-10">
             <div className="video-carousel_container w-screen h-screen relative">
               <div className="w-full h-full flex-center rounded-none overflow-hidden bg-black">
                 <video
-                  id="video"
                   playsInline={true}
                   className={`${
                     list.id === 2 && "translate-x-44"
                   } pointer-events-none w-full h-full object-cover `}
-                  preload="auto"
+                  preload="metadata"
                   muted
                   ref={(el) => (videoRef.current[i] = el)}
                   onEnded={() =>
