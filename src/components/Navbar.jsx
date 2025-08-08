@@ -81,7 +81,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gradient-to-b from-zinc-900/90 to-transparent shadow-md transition-all duration-300"
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/95 sm:bg-gradient-to-b sm:from-zinc-900/90 sm:to-transparent shadow-md transition-all duration-300"
       id="navbar"
     >
       <nav className="flex w-full max-w-screen-xl mx-auto justify-between items-center py-5 sm:px-10 px-5 h-20">

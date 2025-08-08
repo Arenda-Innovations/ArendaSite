@@ -41,7 +41,6 @@ const ContactForm = () => {
 
       setSuccessMessage('Thank you! Form is submitted');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      window.location.reload();
     } catch (err) {
       console.error('Error!', err);
       setErrorMessage('Failed to submit form. Please try again.');
@@ -52,9 +51,9 @@ const ContactForm = () => {
   
 
   return (
-    <div className="flex h-screen px-8 py-12 gap-8 bg-black">
+    <div className="flex min-h-screen px-4 sm:px-8 py-8 sm:py-12 gap-6 sm:gap-8 bg-black overflow-y-auto">
       {/* Left - Form */}
-      <div className="w-[48%] bg-white p-10 flex flex-col justify-center rounded-3xl shadow-xl">
+      <div className="w-full md:w-[48%] bg-white p-6 md:p-10 flex flex-col justify-center rounded-3xl shadow-xl">
         <h2 className="text-3xl font-semibold text-zinc-800 mb-6">Get in Touch</h2>
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
@@ -125,7 +124,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="flex items-center justify-end gap-4 mt-4">
+          <div className="flex items-center justify-end gap-4 mt-6">
             {successMessage && (
               <p className="text-green-600 font-medium text-sm">{successMessage}</p>
             )}
@@ -135,7 +134,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-2 rounded-xl bg-black text-white hover:bg-zinc-700 transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-1/3 sm:w-auto px-5 py-2 rounded-xl bg-black hover:bg-zinc-700 text-white transition font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
@@ -143,8 +142,8 @@ const ContactForm = () => {
         </form>
       </div>
 
-      {/* Right - Info */}
-      <div className="w-[48%] bg-gray-200 p-10 flex flex-col justify-center rounded-3xl shadow-xl">
+      {/* Right - Info (hidden on mobile) */}
+      <div className="hidden md:flex w-[48%] bg-gray-200 p-10 flex-col justify-center rounded-3xl shadow-xl">
         <h3 className="text-2xl font-semibold text-zinc-800 mb-4">Why Contact Us?</h3>
         <p className="text-zinc-700 text-sm leading-relaxed">
           We value your input. Whether you need support, have a question, or just want to share your thoughts,   
