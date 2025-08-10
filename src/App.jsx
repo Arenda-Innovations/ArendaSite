@@ -13,11 +13,13 @@ import AIPage from './components/Pages/AIPage';
 import EngineeringPage from './components/Pages/EngineeringPage';
 import SocialImpactPage from './components/Pages/SocialImpactPage';
 import ProjectBento from './components/ProjectBento';
+import DevelopmentBanner from './components/DevelopmentBanner';
 
 
 const App = () => {
   return (
     <div className="scroll-smooth">
+      <DevelopmentBanner />
       <Navbar />
       <Routes>
         <Route path="/" element={
