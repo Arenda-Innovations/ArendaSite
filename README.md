@@ -30,4 +30,4 @@ VITE_SENTRY_DSN=your_sentry_dsn_here
 - Never commit your `.env` file to version control
 - The `.env` file is already included in `.gitignore`
 - Use different tokens for development and production environments
-- The DSN is safe to expose in client-side code, but the auth token should be kept secret
+- The DSN is safe to expose in client-side code, but the auth token should be kept secret# ArendaWebsite
