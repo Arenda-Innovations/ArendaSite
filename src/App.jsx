@@ -12,9 +12,8 @@ import FounderPage from './components/Pages/FounderPage';
 import AIPage from './components/Pages/AIPage';
 import EngineeringPage from './components/Pages/EngineeringPage';
 import SocialImpactPage from './components/Pages/SocialImpactPage';
-import ProjectBento from './components/ProjectBento';
 import DevelopmentBanner from './components/DevelopmentBanner';
-
+import CommitmentToArkansas from './components/CommitmentToArkansas';
 
 const App = () => {
   return (
@@ -27,6 +26,7 @@ const App = () => {
             <Hero/>
             <ResearchPage/>
             <BeltOfCollabs/>
+            <CommitmentToArkansas/>
             
           </>
         } />
