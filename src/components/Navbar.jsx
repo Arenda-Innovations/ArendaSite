@@ -116,7 +116,7 @@ const Navbar = () => {
       <div 
         id="mobile-menu"
         className={`sm:hidden overflow-hidden transition-all duration-300 bg-black/95 backdrop-blur-md ${
-          isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'
         }`}
         role="dialog"
         aria-modal="true"

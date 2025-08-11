@@ -63,10 +63,10 @@ export const researchPageContent = ['Arenda Research', 'At Arenda, we believe in
 export const projects = [
   {
     id: 1,
-    title: "aiOS/surfOS",
+    title: "BlurOS",
     description: "A new operating system that is designed to be a more efficient and implement AI from its core",
     imageURL: "https://picsum.photos/400/300?random=1",
-    author: "Arjun Paradkar",
+    author: "Arjun Paradkar, Nischal Keshav, Arham Shah",
     includesAI: true,
     includesEngineering: false,
     includesSI: false
@@ -95,7 +95,7 @@ export const projects = [
     id: 4,
     title: "AI-Powered RC Plane",
     description: "An RC plane that is powered by AI to fly autonomously and avoid obstacles",
-    imageURL: "https://picsum.photos/400/300?random=4",
+    imageURL: "https://f005.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z046a387b608e935e9c8c0319_f10395aee86af1630_d20250811_m201006_c005_v0501035_t0017_u01754943006488",
     author: "Arjun Paradkar",
     includesAI: true,
     includesEngineering: true,
@@ -203,29 +203,22 @@ export const founders = [
     title: "Founder",
     description:"Arjun founded Arenda Innovations with one goal: To \"Build the Future\". He firmly believes that there is no time, no age, and no place that limits that pursuit. He is a dual enrolled student at the University of Arkansas and specializes in Math, Physics, and AI research. He frontiers Arenda's quest to create the system that defines how humans interact with tech for decades to come.",
     imageUrl: "/assets/images/ArjunP1.jpg",
-    orientation: "left"
-  },
-  {
-    id: 2,
-    name: "Arham Shah",
-    title: "CTO & Co-Founder",
-    description: "Sarah is a brilliant technologist and systems architect who has revolutionized the way we think about scalable software infrastructure. With a background in distributed systems and cloud computing, she has built platforms that handle millions of concurrent users. Her expertise spans from low-level systems programming to cutting-edge AI deployment, making her the driving force behind Arenda's technical innovation.",
-    imageUrl: "https://i.pravatar.cc/300?img=2",
     orientation: "right"
   },
+  
   {
     id: 3,
     name: "Nischal Keshav",
-    title: "CTO",
+    title: "Head of Technology",
     description: "Nischal Keshav is the Technical Lead at Arenda Innovations and built this website. He is a Junior at Bentonville High School and is interested in pursuing a career in Computer Science. He is also a Founder of the ISEF club at Bentonville High School.",
-    imageUrl: "https://i.pravatar.cc/300?img=3",
+    imageUrl: "/assets/images/Nischal1.jpg",
     orientation: "left"
   },
   {
     id: 4,
     name: "Naman S. Guggilam",
-    title: "Chief Scientific Officer",
-    description: "Naman Guggilam is a visionary student-researcher exploring the frontiers of AI, neuroscience, and theoretical physics. He leads ARENDA with a mission to transform youth innovation into world-changing breakthroughs. He is also a Founder of the ISEF club and Philosophy club at Bentonville High School.",
+    title: "Head of Research",
+    description: "Naman co-founded ARENDA Innovations with a mission to push the boundaries of science and technology. A physicist and neuroscientist in training, he explores questions that bridge the fundamental laws of the universe with the complexities of the human brain. His current focus is on pioneering the discovery of novel non-coding RNA biomarkers for Alzheimer’s disease — blending advanced machine learning with deep biological insight to enable earlier detection and intervention. Through ARENDA, Naman works to create technologies that unite the precision of physics, the power of AI, and the promise of biology to shape the future of human health and intelligence.",
     imageUrl: "/assets/images/Naman1.png",
     orientation: "right"
   },
@@ -242,7 +235,7 @@ export const founders = [
   {
     id: 6,
     name: "Aaroosh Davalbhakta",
-    title: "Position",
+    title: "ARENDA Mentor",
     description: "My name is Aaroosh Davalbhakta, and I am a senior at Haas Hall Academy Bentonville. I am looking to pursue a career in Chemical Engineering.",
     imageUrl: "/assets/images/Aaroosh1.jpeg",
     orientation: "right"

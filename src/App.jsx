@@ -25,7 +25,6 @@ const App = () => {
         <Route path="/" element={
           <>
             <Hero/>
-            <VideoCarousel/>
             <ResearchPage/>
             <BeltOfCollabs/>
             

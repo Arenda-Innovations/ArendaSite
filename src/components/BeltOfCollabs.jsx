@@ -5,7 +5,11 @@ import React from 'react';
 const BeltOfCollabs = () => {
     const partners = [
         { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Replace with actual UCA logo when available
-        
+        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' },
+        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Duplicate for seamless loop
+        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' }, // Duplicate for seamless loop
+        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Third instance
+        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' }, // Third instance
     ];
     return (
         <>
@@ -22,7 +26,7 @@ const BeltOfCollabs = () => {
                         width: '200%',
                         animation: '35s linear 0s infinite normal none running marquee',
                         display: 'flex',
-                        gap: 'clamp(1rem, 3vw, 2rem)',
+                        gap: 'clamp(0.5rem, 1.5vw, 1rem)',
                         alignItems: 'center',
                     }}
                 >

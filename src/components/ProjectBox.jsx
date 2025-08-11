@@ -30,7 +30,7 @@ const ProjectBox = ({ imageURL, title, description, author, className = "" }) =>
     <div
       id="project-box"
       ref={boxRef}
-      className={`w-full h-[250px] max-w-2xl mx-auto rounded-2xl border border-gray-500 p-4 bg-black flex items-center space-x-4 
+      className={`w-full min-h-[250px] max-w-2xl mx-auto rounded-2xl border border-gray-500 p-4 bg-black flex items-center space-x-4 
       transition-shadow duration-300 shadow-[0_0_15px_rgba(255,255,255,0.4)] hover:shadow-[0_0_30px_rgba(255,255,255,0.9)] ${className}`}
     >
       <img
@@ -38,15 +38,13 @@ const ProjectBox = ({ imageURL, title, description, author, className = "" }) =>
         src={imageURL}
         alt="Project"
       />
-      <div className="vertical-container">
-      
-        <h2 className="text-lg font-semibold text-white mb-0">{title}</h2>
-        <p className="text-xs text-gray-400 mt-0">
+      <div className="flex-1 flex flex-col min-w-0">
+        <h2 className="text-lg font-semibold text-white mb-2">{title}</h2>
+        <p className="text-xs text-gray-400 mb-2">
             <span className="font-medium">Author:</span> {author}
         </p>
         
-        <p className="text-sm text-white">{description}</p>
-        
+        <p className="text-sm text-white leading-relaxed">{description}</p>
       </div>
     </div>
   );

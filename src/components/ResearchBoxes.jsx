@@ -32,26 +32,26 @@ const ResearchBoxes = () => {
 
   const researchAreas = [
     { 
-      title: '⚙️ Advanced Engineering', 
+      title: 'Advanced Engineering', 
       desc: 'Building robust, scalable systems that push the boundaries of what\'s possible in hardware and software engineering.',
-      color: 'from-blue-500/20 to-blue-600/20',
-      borderColor: 'border-blue-400/30',
-      glowColor: 'blue',
+      color: 'from-gray-500/20 to-gray-600/20',
+      borderColor: 'border-gray-400/30',
+      glowColor: 'gray',
       route: '/engineering'
     },
     { 
-      title: '🧠 Artificial Intelligence', 
+      title: ' Artificial Intelligence', 
       desc: 'Developing cutting-edge AI algorithms and machine learning models that solve complex real-world problems.',
-      color: 'from-purple-500/20 to-purple-600/20',
-      borderColor: 'border-purple-400/30',
+      color: 'from-gray-500/20 to-gray-600/20',
+      borderColor: 'border-gray-400/30',
       glowColor: 'purple',
       route: '/ai'
     },
     { 
-      title: '🌐 Systems & Society', 
+      title: 'Systems & Society', 
       desc: 'Creating technology solutions that address societal challenges and make a positive impact on communities.',
-      color: 'from-pink-500/20 to-pink-600/20',
-      borderColor: 'border-pink-400/30',
+      color: 'from-gray-500/20 to-gray-600/20',
+      borderColor: 'border-gray-400/30',
       glowColor: 'pink',
       route: '/social-impact'
     }
@@ -80,6 +80,7 @@ const ResearchBoxes = () => {
                   ${pillar.glowColor === 'blue' ? 'hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] hover:border-blue-400/80' : ''}
                   ${pillar.glowColor === 'purple' ? 'hover:shadow-[0_0_40px_rgba(147,51,234,0.6)] hover:border-purple-400/80' : ''}
                   ${pillar.glowColor === 'pink' ? 'hover:shadow-[0_0_40px_rgba(236,72,153,0.6)] hover:border-pink-400/80' : ''}
+                  ${pillar.glowColor === 'gray' ? 'hover:shadow-[0_0_40px_rgba(107,114,128,0.6)] hover:border-gray-400/80' : ''}
                 `}
               >
                 {/* Glow effect overlay */}
@@ -87,6 +88,7 @@ const ResearchBoxes = () => {
                   ${pillar.glowColor === 'blue' ? 'bg-gradient-to-br from-blue-400/20 via-blue-500/10 to-blue-600/20' : ''}
                   ${pillar.glowColor === 'purple' ? 'bg-gradient-to-br from-purple-400/20 via-purple-500/10 to-purple-600/20' : ''}
                   ${pillar.glowColor === 'pink' ? 'bg-gradient-to-br from-pink-400/20 via-pink-500/10 to-pink-600/20' : ''}
+                  ${pillar.glowColor === 'gray' ? 'bg-gradient-to-br from-gray-400/20 via-gray-500/10 to-gray-600/20' : ''}
                 `}></div>
                 
                 {/* Animated glow ring */}
@@ -94,6 +96,7 @@ const ResearchBoxes = () => {
                   ${pillar.glowColor === 'blue' ? 'bg-gradient-to-r from-blue-400/30 via-blue-500/20 to-blue-600/30' : ''}
                   ${pillar.glowColor === 'purple' ? 'bg-gradient-to-r from-purple-400/30 via-purple-500/20 to-purple-600/30' : ''}
                   ${pillar.glowColor === 'pink' ? 'bg-gradient-to-r from-pink-400/30 via-pink-500/20 to-pink-600/30' : ''}
+                  ${pillar.glowColor === 'gray' ? 'bg-gradient-to-r from-gray-400/30 via-gray-500/20 to-gray-600/30' : ''}
                   blur-xl scale-110 group-hover:scale-125
                 `}></div>
                 
