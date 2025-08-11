@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import ThreeDModel from './DodecahedronModel';
 gsap.registerPlugin(ScrollTrigger);
 
+
 const ResearchEssay = () => {
     const essayRef = useRef(null);
     const titleRef = useRef(null);
@@ -65,16 +66,7 @@ const ResearchEssay = () => {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center">
-                      {/* SVG for Arenda Logo */}
-                      <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0L0 7V21L12 28L24 21V7L12 0ZM12 2.94L2.35 8.79V18.57L12 24.41L21.65 18.57V8.79L12 2.94ZM12 5.88L17.76 9.24L12 12.6L6.24 9.24L12 5.88ZM12 14.54L17.76 11.18L12 17.52L6.24 11.18L12 14.54ZM12 19.34L17.76 15.98L12 22.32L6.24 15.98L12 19.34Z" fill="url(#logoGradient)"/>
-                        <defs>
-                          <linearGradient id="logoGradient" x1="0" y1="0" x2="24" y2="28" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#60A5FA"/> {/* Blue-400 */}
-                            <stop offset="1" stopColor="#A78BFA"/> {/* Purple-400 */}
-                          </linearGradient>
-                        </defs>
-                      </svg>
+                    <img src="/assets/images/ArendaLogo.svg" alt="Logo" width={24} height={28} />
                     </div>
                     <h3 className="text-2xl font-bold text-white">Our Mission</h3>
                   </div>

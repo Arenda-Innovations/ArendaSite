@@ -1,13 +1,7 @@
 export const heroImg = "https://f005.backblazeb2.com/file/PublicArendaAssets/heroVideo.mp4";
 
 
-//import smallmv from "/assets/videos/smallHero.mp4";
-//import highlightFirstmv from "/assets/videos/highlight-first.mp4";
-//import highlightSectmv from "/assets/videos/hightlight-third.mp4";
-//import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
-//import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
-//import exploremv from "/assets/videos/explore.mp4";
-//import framemv from "/assets/videos/frame.mp4";
+
 
 const ArendaLogo="https://f005.backblazeb2.com/file/PublicArendaAssets/ArendaLogo.svg"
 
@@ -22,3 +16,12 @@ export const frameVideo = "https://f005.backblazeb2.com/file/PublicArendaAssets/
 export const pauseImg = ArendaLogo;//replace these images with 
 export const playImg = ArendaLogo;
 export const replayImg = ArendaLogo; 
+
+
+//import smallmv from "/assets/videos/smallHero.mp4";
+//import highlightFirstmv from "/assets/videos/highlight-first.mp4";
+//import highlightSectmv from "/assets/videos/hightlight-third.mp4";
+//import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
+//import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
+//import exploremv from "/assets/videos/explore.mp4";
+//import framemv from "/assets/videos/frame.mp4";

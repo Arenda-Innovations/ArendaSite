@@ -3,6 +3,10 @@ import React from 'react';
 
 
 const BeltOfCollabs = () => {
+    const partners = [
+        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Replace with actual UCA logo when available
+        
+    ];
     return (
         <>
             <div className="max-w-7xl mx-auto px-8">
@@ -22,24 +26,28 @@ const BeltOfCollabs = () => {
                         alignItems: 'center',
                     }}
                 >
-                    {Array.from({ length: 12 }).map((_, index) => (
-                        <img
-                            key={index}
-                            src="/assets/images/react.svg"
-                            alt="University Logo"
-                            style={{
-                                height:
-                                    index % 3 === 0
-                                        ? 'clamp(70px, 12vw, 90px)'
-                                        : index % 3 === 1
-                                        ? 'clamp(40px, 8vw, 48px)'
-                                        : 'clamp(55px, 9vw, 64px)',
-                                objectFit: 'contain',
-                                filter: 'brightness(0.95) contrast(1.1)',
-                                margin: '0 auto',
-                                display: 'block',
-                            }}
-                        />
+                    {partners.map((partner, index) => (
+                        <div key={index} className="text-center">
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name} Logo`}
+                                style={{
+                                    height:
+                                        index % 3 === 0
+                                            ? 'clamp(70px, 12vw, 90px)'
+                                            : index % 3 === 1
+                                            ? 'clamp(40px, 8vw, 48px)'
+                                            : 'clamp(55px, 9vw, 64px)',
+                                    objectFit: 'contain',
+                                    filter: 'brightness(0.95) contrast(1.1)',
+                                    margin: '0 auto',
+                                    display: 'block',
+                                }}
+                            />
+                            <div className="text-white text-sm mt-2 font-medium opacity-80">
+                                {partner.name}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

@@ -64,7 +64,7 @@ export const projects = [
   {
     id: 1,
     title: "aiOS/surfOS",
-    description: "A new operating system that is designed to be a more efficient and implement AI from its core.",
+    description: "A new operating system that is designed to be a more efficient and implement AI from its core",
     imageURL: "https://picsum.photos/400/300?random=1",
     author: "Arjun Paradkar",
     includesAI: true,
@@ -74,9 +74,9 @@ export const projects = [
   {
     id: 2,
     title: "BrAIn",
-    description: "A novel AI architecture that is more efficient and cheaper than the current state of the art.",
+    description: "A novel AI architecture that is more efficient and cheaper than the current state of the art",
     imageURL: "https://picsum.photos/400/300?random=2",
-    author: "Naman S. Gugliman",
+    author: "Arjun Paradkar",
     includesAI: true,
     includesEngineering: true,
     includesSI: false
@@ -84,9 +84,9 @@ export const projects = [
   {
     id: 3,
     title: "Allergy App",
-    description: "A mobile app that utilizes AI to detect allergies through images and provide personalized recommendations for food and other products.",
+    description: "A mobile app that utilizes AI to detect allergies through images and provide personalized recommendations for food and other products",
     imageURL: "https://picsum.photos/400/300?random=3",
-    author: "Satya S. Gugliman",
+    author: "Arjun, Satya, Nischal, Naman",
     includesAI: true,
     includesEngineering: false,
     includesSI: true
@@ -94,57 +94,57 @@ export const projects = [
   {
     id: 4,
     title: "AI-Powered RC Plane",
-    description: "An RC plane that is powered by AI to fly autonomously and avoid obstacles.",
+    description: "An RC plane that is powered by AI to fly autonomously and avoid obstacles",
     imageURL: "https://picsum.photos/400/300?random=4",
-    author: "Aaroosh Davalbhakta",
+    author: "Arjun Paradkar",
     includesAI: true,
     includesEngineering: true,
     includesSI: false
   },
   {
     id: 5,
-    title: "Distributed Systems Architecture",
-    description: "Scalable distributed systems design for handling millions of concurrent users with high availability and fault tolerance.",
+    title: "AI-Driven exploration for Alzheimer’s Biomarkers",
+    description: "Using new unused AI Architectures to find new RNA biomarkers through data analysis",
     imageURL: "https://picsum.photos/400/300?random=5",
-    author: "Arham Shah",
-    includesAI: false,
-    includesEngineering: true,
-    includesSI: false
+    author: "Naman S. Guggilam",
+    includesAI: true,
+    includesEngineering: false,
+    includesSI: true
   },
   {
     id: 6,
-    title: "IoT Platform Development",
-    description: "Comprehensive IoT platform for connecting and managing smart devices with real-time data processing and analytics.",
+    title: "AI-Integrated Void One Glasses",
+    description: "Void One Glasses with D. One OS turn any display into an AI-controlled, voice-driven workspace. It’s the “Android for AI wearables” — sleek, adaptive, and always learning",
     imageURL: "https://picsum.photos/400/300?random=6",
-    author: "Nischal Keshav",
+    author: "Arham Shah",
     includesAI: true,
     includesEngineering: true,
-    includesSI: false
+    includesSI: true
   },
   {
     id: 7,
-    title: "Blockchain Infrastructure",
-    description: "Enterprise-grade blockchain infrastructure for secure, transparent, and scalable decentralized applications.",
+    title: "Enhanced Detection of Rare and Misdiagnosed Cancers in Histopathology Images",
+    description: "This project aims to develop a convolutional neural network (CNN)-based classification system specialized in identifying rare and frequently misdiagnosed cancers from digitized histopathology slides." ,
     imageURL: "https://picsum.photos/400/300?random=7",
-    author: "Arjun Paradkar",
-    includesAI: false,
-    includesEngineering: true,
-    includesSI: false
+    author: "Naman S. Guggilam",
+    includesAI: true,
+    includesEngineering: false,
+    includesSI: true
   },
   {
     id: 8,
-    title: "Cloud Computing Solutions",
-    description: "Advanced cloud computing solutions with auto-scaling, load balancing, and cost optimization for modern applications.",
+    title: "AlzRate: Multimodal AI for Predicting Individual Alzheimer’s Progression Rate",
+    description: "AlzRate uses integrated blood ncRNA expression, baseline neuroimaging features (e.g., hippocampal volume), genetic deposition, and clinical data to predict an individual’s future rate of cognitive decline and time-to-AD conversion",
     imageURL: "https://picsum.photos/400/300?random=8",
-    author: "Arham Shah",
-    includesAI: false,
+    author: "Naman S. Guggilam",
+    includesAI: true,
     includesEngineering: true,
-    includesSI: false
+    includesSI: true
   },
   {
     id: 9,
-    title: "Educational Technology Platform",
-    description: "Innovative educational technology platform designed to bridge the digital divide and provide quality education to underserved communities.",
+    title: " Optimizing Topical Drug Delivery in Eczema Treatment",
+    description: "Optimizing drug formulations for better skin penetration or targeted delivery, reducing systemic exposure. Using adjuvants or enhancers that increase drug absorption locally.",
     imageURL: "https://picsum.photos/400/300?random=9",
     author: "Naman S. Gugliman",
     includesAI: true,
@@ -153,38 +153,36 @@ export const projects = [
   },
   {
     id: 10,
-    title: "Healthcare Access System",
-    description: "Digital healthcare access system that connects remote communities with medical professionals and healthcare resources.",
+    title: "NeuroSnap",
+    description: "AI-Based Emotion Recognition from EEG Snapshots for Mental Health Insights",
     imageURL: "https://picsum.photos/400/300?random=10",
-    author: "Satya S. Gugliman",
+    author: "Arya Devanath",
     includesAI: true,
-    includesEngineering: true,
+    includesEngineering: false,
     includesSI: true
   },
   {
     id: 11,
-    title: "Environmental Monitoring",
-    description: "Environmental monitoring system using AI and IoT to track climate change, pollution levels, and natural resource management.",
+    title: "GenieTrack",
+    description: "A revolutionary educational platform that uniquely utilizes AI and various teaching methods to effectively help students improve in various fields",
     imageURL: "https://picsum.photos/400/300?random=11",
-    author: "Aaroosh Davalbhakta",
+    author: "Reva",
     includesAI: true,
     includesEngineering: true,
     includesSI: true
   },
   {
     id: 12,
-    title: "Community Development App",
-    description: "Mobile application for community development that facilitates local initiatives, volunteer coordination, and resource sharing.",
+    title: "AI-Enhanced Insulin Dosing for Pregnant Women with Type-2 Diabetes",
+    description: "This project explores how individualized, AI-driven insulin dosing can optimize blood sugar control and reduce hypoglycemia risk in pregnant patients with Type-2 diabetes, compared to standard treatment methods. The goal is to design or propose a system that adapts to each patient’s unique hormonal and metabolic changes during pregnancy",
     imageURL: "https://picsum.photos/400/300?random=12",
-    author: "Nischal Keshav",
-    includesAI: false,
-    includesEngineering: true,
-    includesSI: true
-  }
-];
-
-
-
+    author: "Sifa Siraj",
+    includesAI: true,
+    includesEngineering: false,
+    includesSI: false
+ },
+  
+ ];
 
 
 
@@ -225,17 +223,17 @@ export const founders = [
   },
   {
     id: 4,
-    name: "Naman S. Gugliman",
+    name: "Naman S. Guggilam",
     title: "Chief Scientific Officer",
-    description: "Naman Guggilam is a visionary student-researcher exploring the frontiers of AI, neuroscience, and theoretical physics. He leads ARENDA with a mission to transform youth innovation into world-changing breakthroughs.",
+    description: "Naman Guggilam is a visionary student-researcher exploring the frontiers of AI, neuroscience, and theoretical physics. He leads ARENDA with a mission to transform youth innovation into world-changing breakthroughs. He is also a Founder of the ISEF club and Philosophy club at Bentonville High School.",
     imageUrl: "/assets/images/Naman1.png",
     orientation: "right"
   },
   {
     id: 5,
-    name: "Satya S. Gugliman",
+    name: "Satya Achanti",
     title: "Chief Scientific Officer",
-    description: "My name is Satya Achanti and I am a sophomore at Bentonville High School. I am interested in medicine and want to pursue being a neurologist as my career. I love math and anything science related.",
+    description: "Satya Achanti is a sophomore at Bentonville High School interested in medicine and want to pursue being a neurologist as his career. He loves math and science.",
     imageUrl: "/assets/images/Satya1.jpg",
     orientation: "left"
   },
