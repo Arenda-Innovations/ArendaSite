@@ -59,11 +59,11 @@ const CommitmentToArkansas = () => {
   
           {/* Main Content Section - FLIPPED LAYOUT */}
           <div ref={contentRef} className=" mx-auto">
-            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Left side - BLANK IMAGE SECTION (flipped from ResearchEssay) */}
                 <div className="relative aspect-video md:aspect-square flex items-center justify-center">
-                  <div className="w-full h-full rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-white/5 p-4 flex items-center justify-center">
+                  <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl bg-white/5 p-4 flex items-center justify-center">
                     <div className="text-center text-white/60">
                       <img src="./assets/images/ArkansasSample.webp"></img>
                     </div>

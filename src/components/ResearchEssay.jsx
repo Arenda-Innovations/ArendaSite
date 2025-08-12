@@ -94,7 +94,7 @@ const ResearchEssay = () => {
   
                 {/* Right side - Three.js Visual (now a component) */}
                 <div className="relative aspect-video md:aspect-square flex items-center justify-center">
-                  <div className="w-full h-full rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-white/5 p-4 flex items-center justify-center">
+                  <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl bg-white/5 p-4 flex items-center justify-center">
                     <ThreeDModel /> {/* Render the new component here */}
                   </div>
                 </div>

@@ -32,7 +32,7 @@ const PlaceholderImage = ({
   };
 
   return (
-    <div className={`aspect-square rounded-lg overflow-hidden border border-white/20 bg-white/5 relative group ${className}`}>
+    <div className={`aspect-square rounded-lg overflow-hidden bg-white/5 relative group ${className}`}>
       {/* Image Placeholder */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white/60">

@@ -71,7 +71,7 @@ const ReachOutNow = () => {
       </div>
 
       {/* Tabs at Bottom */}
-      <div className="flex justify-center mt-6 pt-4 border-t border-white/20">
+      <div className="flex justify-center mt-6 pt-4">
         <div className="flex bg-white/10 rounded-xl p-1 relative">
           {/* Animated Background Slider */}
           <div 
