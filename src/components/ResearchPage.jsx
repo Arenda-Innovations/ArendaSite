@@ -6,7 +6,6 @@ const ArendaResearch = () => {
   return (
     <>
       <ResearchEssay />
-      <ResearchBoxes />
     </>
   );
 };

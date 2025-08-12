@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import WhyArendaBox from './WhyArendaBox';
+import ReachOutNow from './ReachOutNow';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,13 +10,16 @@ const WhyArenda = () => {
   const boxesRef = useRef([]);
 
   useEffect(() => {
-    // Animate boxes with staggered delays
+    // Animate boxes coming in from the side with staggered delays
     boxesRef.current.forEach((el, i) => {
+      // Alternate between left and right side entry
+      const fromSide = i % 2 === 0 ? -100 : 100;
+      
       gsap.fromTo(el,
-        { opacity: 0, y: 100, rotation: -15 },
+        { opacity: 0, x: fromSide, rotation: i % 2 === 0 ? -15 : 15 },
         {
           opacity: 1,
-          y: 0,
+          x: 0,
           rotation: 0,
           duration: 1.2,
           ease: "power3.out",
@@ -24,7 +28,7 @@ const WhyArenda = () => {
             start: "top 85%",
             toggleActions: "play none none none"
           },
-          delay: i * 0.3
+          delay: i * 0.2
         }
       );
     });
@@ -39,8 +43,8 @@ const WhyArenda = () => {
         "Breakthrough technologies",
         "Future-focused solutions"
       ],
-      color: "from-blue-500/20 to-purple-500/20",
-      borderColor: "border-blue-400/30",
+      color: "from-gray-500/20 to-gray-600/20",
+      borderColor: "border-gray-400/30",
       rotation: "rotate-3"
     },
     {
@@ -51,8 +55,8 @@ const WhyArenda = () => {
         "Student research teams",
         "Peer-to-peer learning"
       ],
-      color: "from-green-500/20 to-blue-500/20",
-      borderColor: "border-green-400/30",
+      color: "from-gray-500/20 to-gray-600/20",
+      borderColor: "border-gray-400/30",
       rotation: "-rotate-2"
     },
     {
@@ -63,8 +67,8 @@ const WhyArenda = () => {
         "Community partnerships",
         "Real-world applications"
       ],
-      color: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-400/30",
+      color: "from-gray-500/20 to-gray-600/20",
+      borderColor: "border-gray-400/30",
       rotation: "rotate-1"
     },
     {
@@ -75,8 +79,8 @@ const WhyArenda = () => {
         "Quality assurance",
         "Continuous improvement"
       ],
-      color: "from-orange-500/20 to-red-500/20",
-      borderColor: "border-orange-400/30",
+      color: "from-gray-500/20 to-gray-600/20",
+      borderColor: "border-gray-400/30",
       rotation: "-rotate-1"
     },
     {
@@ -87,8 +91,8 @@ const WhyArenda = () => {
         "Cross-cultural collaboration",
         "Worldwide impact"
       ],
-      color: "from-cyan-500/20 to-blue-500/20",
-      borderColor: "border-cyan-400/30",
+      color: "from-gray-500/20 to-gray-600/20",
+      borderColor: "border-gray-400/30",
       rotation: "rotate-2"
     },
     {
@@ -99,8 +103,8 @@ const WhyArenda = () => {
         "Emerging technologies",
         "Adaptive learning"
       ],
-      color: "from-pink-500/20 to-purple-500/20",
-      borderColor: "border-pink-400/30",
+      color: "from-gray-500/20 to-gray-600/20",
+      borderColor: "border-gray-400/30",
       rotation: "-rotate-3"
     }
   ];
@@ -131,6 +135,12 @@ const WhyArenda = () => {
               isTall={false}
             />
           ))}
+          
+          {/* Reach Out Now Box - Same shape as other boxes */}
+          <div className="md:col-span-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 p-4 rounded-xl
+            backdrop-blur-sm shadow-xl hover:shadow-[0_0_40px_rgba(107,114,128,0.4)] transition-all duration-500 cursor-pointer group">
+            <ReachOutNow />
+          </div>
         </div>
       </div>
     </section>
