@@ -17,7 +17,7 @@ const DevelopmentBanner = () => {
             
           </svg>
           <span className="text-sm font-medium">
-             Website in Development - Changes are expected and information may be incorrect or out of date. Build v.1.0.9
+             Website in Development - Changes are expected and information may be incorrect or out of date. Build v.1.0.10
           </span>
         </div>
         <button

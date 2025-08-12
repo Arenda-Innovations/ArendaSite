@@ -14,7 +14,7 @@ import EngineeringPage from './components/Pages/EngineeringPage';
 import SocialImpactPage from './components/Pages/SocialImpactPage';
 import DevelopmentBanner from './components/DevelopmentBanner';
 import CommitmentToArkansas from './components/CommitmentToArkansas';
-
+import WhyArenda from './components/WhyArenda';
 const App = () => {
   return (
     <div className="scroll-smooth">
@@ -26,6 +26,7 @@ const App = () => {
             <Hero/>
             <ResearchPage/>
             <BeltOfCollabs/>
+            <WhyArenda/>
             <CommitmentToArkansas/>
             
           </>

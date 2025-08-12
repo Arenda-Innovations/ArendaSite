@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import * as THREE from 'three';
 import ThreeDModel from './DodecahedronModel';
+import BulletPoint from './BulletPoint';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -49,7 +50,7 @@ const ResearchEssay = () => {
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
   
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="w-full relative z-10">
           {/* Title Section */}
           <div ref={titleRef} className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
@@ -59,7 +60,7 @@ const ResearchEssay = () => {
           </div>
   
           {/* Main Essay/Content Section */}
-          <div ref={essayRef} className="max-w-4xl mx-auto">
+          <div ref={essayRef} className="w-full">
             <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Left side - Mission Statement */}
@@ -71,17 +72,24 @@ const ResearchEssay = () => {
                     <h3 className="text-2xl font-bold text-white">Our Mission</h3>
                   </div>
   
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                    At Arenda, we believe in pushing the boundaries of science and technology.
-                    Our students work on novel, high-impact STEM projects that shape the future
-                    of innovation and discovery.
-                  </p>
-  
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                    From artificial intelligence to advanced hardware systems, our mission is to
-                    guide students into becoming world-class innovators and builders—starting with
-                    first principles and aiming for mastery in every endeavor.
-                  </p>
+                  <ul className="space-y-6 text-lg md:text-xl text-white/90">
+                    <BulletPoint 
+                      text="Pushing the boundaries of science and technology through innovative research" 
+                      color="blue" 
+                    />
+                    <BulletPoint 
+                      text="Developing novel, high-impact STEM projects that shape the future" 
+                      color="purple" 
+                    />
+                    <BulletPoint 
+                      text="Building cutting-edge AI algorithms and machine learning systems" 
+                      color="blue" 
+                    />
+                    <BulletPoint 
+                      text="Guiding students to become world-class innovators and builders" 
+                      color="purple" 
+                    />
+                  </ul>
                 </div>
   
                 {/* Right side - Three.js Visual (now a component) */}

@@ -86,7 +86,7 @@ export const projects = [
     title: "Allergy App",
     description: "A mobile app that utilizes AI to detect allergies through images and provide personalized recommendations for food and other products",
     imageURL: "https://picsum.photos/400/300?random=3",
-    author: "Arjun, Satya, Nischal, Naman",
+    author: "Arjun Paradkar, Satya Achanti, Nischal Keshav, Naman S. Guggilam",
     includesAI: true,
     includesEngineering: false,
     includesSI: true
@@ -146,7 +146,7 @@ export const projects = [
     title: " Optimizing Topical Drug Delivery in Eczema Treatment",
     description: "Optimizing drug formulations for better skin penetration or targeted delivery, reducing systemic exposure. Using adjuvants or enhancers that increase drug absorption locally.",
     imageURL: "https://picsum.photos/400/300?random=9",
-    author: "Naman S. Gugliman",
+    author: "Naman S. Guggilam",
     includesAI: true,
     includesEngineering: true,
     includesSI: true
@@ -166,7 +166,7 @@ export const projects = [
     title: "GenieTrack",
     description: "A revolutionary educational platform that uniquely utilizes AI and various teaching methods to effectively help students improve in various fields",
     imageURL: "https://picsum.photos/400/300?random=11",
-    author: "Reva",
+    author: "Reva Paradkar",
     includesAI: true,
     includesEngineering: true,
     includesSI: true
