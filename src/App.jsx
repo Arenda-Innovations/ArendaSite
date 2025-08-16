@@ -14,16 +14,15 @@ import EngineeringPage from './components/Pages/EngineeringPage';
 import SocialImpactPage from './components/Pages/SocialImpactPage';
 import DevelopmentBanner from './components/DevelopmentBanner';
 import CommitmentToArkansas from './components/CommitmentToArkansas';
-
+import WhyArenda from './components/WhyArenda';
 const App = () => {
   return (
     <div className="scroll-smooth">
-      <DevelopmentBanner />
       <Navbar />
       <Routes>
         <Route path="/" element={
           <>
-            <Hero/>
+            <Hero className="z-0"/>
             <ResearchPage/>
             <BeltOfCollabs/>
             <CommitmentToArkansas/>

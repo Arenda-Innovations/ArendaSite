@@ -8,13 +8,23 @@ const Footer = () => {
     <div>
       <p className="font-semibold text-gray text-xs">
         More ways to Contribute:{' '}
-        <span className="underline text-blue">Get a Role </span>
-        or{' '}
-        <span className="underline text-blue">Make a project</span>{' '}
-        near you.
+        <a href="https://forms.gle/CwSMa81S3iAhXUPv6" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="underline text-blue hover:text-blue-600 transition-colors">
+          Get a Role
+        </a>
+        {' '}or{' '}
+        <a href="https://forms.gle/CwSMa81S3iAhXUPv6" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="underline text-blue hover:text-blue-600 transition-colors">
+          Make a project
+        </a>
+        {' '}near you.
       </p>
       <p className="font-semibold text-gray text-xs">
-        Or call 123-456-7890
+        Or call 479-900-4748
       </p>
     </div>
   </div>

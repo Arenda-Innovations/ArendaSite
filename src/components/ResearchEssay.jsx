@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import * as THREE from 'three';
 import ThreeDModel from './DodecahedronModel';
+import BulletPoint from './BulletPoint';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -45,11 +46,11 @@ const ResearchEssay = () => {
     }, []);
   
     return (
-      <section className="bg-black text-white py-24 px-6 md:px-12 relative overflow-hidden" id="research-essay">
+      <section className="bg-black text-white py-24 px-6 md:px-12 relative overflow-hidden w-full" id="research-essay">
         {/* Background gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
   
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="w-full relative z-10">
           {/* Title Section */}
           <div ref={titleRef} className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
@@ -59,34 +60,41 @@ const ResearchEssay = () => {
           </div>
   
           {/* Main Essay/Content Section */}
-          <div ref={essayRef} className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+          <div ref={essayRef} className="w-full max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-12 shadow-2xl overflow-hidden">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Left side - Mission Statement */}
-                <div className="space-y-6">
+                <div className="space-y-6 w-full md:w-auto">
                   <div className="flex items-center space-x-3 mb-6">
-                    <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/assets/images/ArendaLogo.svg" alt="Logo" width={24} height={28} />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">Our Mission</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-white break-words">Our Mission</h3>
                   </div>
   
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                    At Arenda, we believe in pushing the boundaries of science and technology.
-                    Our students work on novel, high-impact STEM projects that shape the future
-                    of innovation and discovery.
-                  </p>
-  
-                  <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                    From artificial intelligence to advanced hardware systems, our mission is to
-                    guide students into becoming world-class innovators and builders—starting with
-                    first principles and aiming for mastery in every endeavor.
-                  </p>
+                  <ul className="space-y-6 text-base md:text-lg lg:text-xl text-white/90">
+                    <BulletPoint 
+                      text="We are an accelarator for student based research and development projects" 
+                      color="blue" 
+                    />
+                    <BulletPoint 
+                      text="Developing novel, high-impact STEM projects that shape the future" 
+                      color="purple" 
+                    />
+                    <BulletPoint 
+                      text="Give students the opportunity to work on Massive Projects and Connect with Industry Experts" 
+                      color="blue" 
+                    />
+                    <BulletPoint 
+                      text="Guiding students to become world-class innovators and builders" 
+                      color="purple" 
+                    />
+                  </ul>
                 </div>
   
-                {/* Right side - Three.js Visual (now a component) */}
-                <div className="relative aspect-video md:aspect-square flex items-center justify-center">
-                  <div className="w-full h-full rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-white/5 p-4 flex items-center justify-center">
+                {/* Right side - Three.js Visual (now a component) - Hidden on mobile */}
+                <div className="relative aspect-video md:aspect-square items-center justify-center hidden md:flex">
+                  <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl bg-white/5 p-4 flex items-center justify-center">
                     <ThreeDModel /> {/* Render the new component here */}
                   </div>
                 </div>
