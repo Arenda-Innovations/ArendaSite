@@ -1,6 +1,7 @@
 import { navLists } from '../constants';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import ProjectsDropdown from './ProjectsDropdown';
 
 const Navbar = () => {
   const location = useLocation();
@@ -30,7 +31,7 @@ const Navbar = () => {
 
   const renderNavLink = (nav, isMobile = false) => {
     const baseClasses = "px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all";
-    const mobileClasses = "px-8 py-4 text-lg cursor-pointer text-gray-500 hover:text-white transition-all border-b border-gray-700 last:border-b-0";
+    const mobileClasses = "px-8 py-4 text-lg cursor-pointer text-gray-500 hover:text-white transition-all border-b border-gray-700 ";
     
     const classes = isMobile ? mobileClasses : baseClasses;
     
@@ -90,10 +91,10 @@ const Navbar = () => {
         </Link>
         
         {/* Desktop Navigation */}
-        <div className="flex flex-1 justify-center max-sm:hidden">
+        <div className="flex flex-1 justify-center max-sm:hidden items-center">
           {navLists.map((nav) => (
             <div key={nav}>
-              {renderNavLink(nav, false)}
+              {nav === "Projects" ? <ProjectsDropdown /> : renderNavLink(nav, false)}
             </div>
           ))}
         </div>

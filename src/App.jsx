@@ -18,12 +18,11 @@ import WhyArenda from './components/WhyArenda';
 const App = () => {
   return (
     <div className="scroll-smooth">
-      <DevelopmentBanner />
       <Navbar />
       <Routes>
         <Route path="/" element={
           <>
-            <Hero/>
+            <Hero className="z-0"/>
             <ResearchPage/>
             <BeltOfCollabs/>
             <CommitmentToArkansas/>
