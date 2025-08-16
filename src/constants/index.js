@@ -64,7 +64,7 @@ export const projects = [
   {
     id: 1,
     title: "BlurOS",
-    description: "A new operating system that is designed to be a more efficient and implement AI from its core",
+    description: "An efficient new operating system with AI integrated at its core.",
     imageURL: "https://picsum.photos/400/300?random=1",
     author: "Arjun Paradkar, Nischal Keshav, Arham Shah",
     includesAI: true,
@@ -74,7 +74,7 @@ export const projects = [
   {
     id: 2,
     title: "BrAIn",
-    description: "A novel AI architecture that is more efficient and cheaper than the current state of the art",
+    description: "A novel AI architecture designed for greater efficiency and reduced cost.",
     imageURL: "https://picsum.photos/400/300?random=2",
     author: "Arjun Paradkar",
     includesAI: true,
@@ -84,7 +84,7 @@ export const projects = [
   {
     id: 3,
     title: "Allergy App",
-    description: "A mobile app that utilizes AI to detect allergies through images and provide personalized recommendations for food and other products",
+    description: "A mobile app using AI to detect allergies from images and provide personalized recommendations.",
     imageURL: "https://picsum.photos/400/300?random=3",
     author: "Arjun Paradkar, Satya Achanti, Nischal Keshav, Naman S. Guggilam",
     includesAI: true,
@@ -94,7 +94,7 @@ export const projects = [
   {
     id: 4,
     title: "AI-Powered RC Plane",
-    description: "An RC plane that is powered by AI to fly autonomously and avoid obstacles",
+    description: "An autonomous RC plane that uses AI to fly and avoid obstacles.",
     imageURL: "https://f005.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z046a387b608e935e9c8c0319_f10395aee86af1630_d20250811_m201006_c005_v0501035_t0017_u01754943006488",
     author: "Arjun Paradkar",
     includesAI: true,
@@ -104,7 +104,7 @@ export const projects = [
   {
     id: 5,
     title: "AI-Driven exploration for Alzheimer’s Biomarkers",
-    description: "Using new unused AI Architectures to find new RNA biomarkers through data analysis",
+    description: "A project using new AI architectures to identify novel RNA biomarkers for Alzheimer's.",
     imageURL: "https://picsum.photos/400/300?random=5",
     author: "Naman S. Guggilam",
     includesAI: true,
@@ -114,7 +114,7 @@ export const projects = [
   {
     id: 6,
     title: "AI-Integrated Void One Glasses",
-    description: "Void One Glasses with D. One OS turn any display into an AI-controlled, voice-driven workspace. It’s the “Android for AI wearables” — sleek, adaptive, and always learning",
+    description: "Wearable glasses that transform any display into an AI-controlled, voice-driven workspace.",
     imageURL: "https://picsum.photos/400/300?random=6",
     author: "Arham Shah",
     includesAI: true,
@@ -124,7 +124,7 @@ export const projects = [
   {
     id: 7,
     title: "Enhanced Detection of Rare and Misdiagnosed Cancers in Histopathology Images",
-    description: "This project aims to develop a convolutional neural network (CNN)-based classification system specialized in identifying rare and frequently misdiagnosed cancers from digitized histopathology slides." ,
+    description: "A CNN-based system for detecting rare and commonly misdiagnosed cancers from pathology slides.",
     imageURL: "https://picsum.photos/400/300?random=7",
     author: "Naman S. Guggilam",
     includesAI: true,
@@ -134,7 +134,7 @@ export const projects = [
   {
     id: 8,
     title: "AlzRate: Multimodal AI for Predicting Individual Alzheimer’s Progression Rate",
-    description: "AlzRate uses integrated blood ncRNA expression, baseline neuroimaging features (e.g., hippocampal volume), genetic deposition, and clinical data to predict an individual’s future rate of cognitive decline and time-to-AD conversion",
+    description: "A multimodal AI model that predicts Alzheimer’s progression using genetic, imaging, and clinical data.",
     imageURL: "https://picsum.photos/400/300?random=8",
     author: "Naman S. Guggilam",
     includesAI: true,
@@ -143,8 +143,8 @@ export const projects = [
   },
   {
     id: 9,
-    title: " Optimizing Topical Drug Delivery in Eczema Treatment",
-    description: "Optimizing drug formulations for better skin penetration or targeted delivery, reducing systemic exposure. Using adjuvants or enhancers that increase drug absorption locally.",
+    title: "Optimizing Topical Drug Delivery in Eczema Treatment",
+    description: "A system for improving eczema drug formulations to increase targeted skin absorption.",
     imageURL: "https://picsum.photos/400/300?random=9",
     author: "Naman S. Guggilam",
     includesAI: true,
@@ -154,7 +154,7 @@ export const projects = [
   {
     id: 10,
     title: "NeuroSnap",
-    description: "AI-Based Emotion Recognition from EEG Snapshots for Mental Health Insights",
+    description: "An AI tool that interprets EEG snapshots to detect emotions for mental health insights.",
     imageURL: "https://picsum.photos/400/300?random=10",
     author: "Arya Devanath",
     includesAI: true,
@@ -164,7 +164,7 @@ export const projects = [
   {
     id: 11,
     title: "GenieTrack",
-    description: "A revolutionary educational platform that uniquely utilizes AI and various teaching methods to effectively help students improve in various fields",
+    description: "An AI-powered educational platform that adapts teaching methods for individual student improvement.",
     imageURL: "https://picsum.photos/400/300?random=11",
     author: "Reva Paradkar",
     includesAI: true,
@@ -174,21 +174,14 @@ export const projects = [
   {
     id: 12,
     title: "AI-Enhanced Insulin Dosing for Pregnant Women with Type-2 Diabetes",
-    description: "This project explores how individualized, AI-driven insulin dosing can optimize blood sugar control and reduce hypoglycemia risk in pregnant patients with Type-2 diabetes, compared to standard treatment methods. The goal is to design or propose a system that adapts to each patient’s unique hormonal and metabolic changes during pregnancy",
+    description: "An adaptive AI system for optimizing insulin dosing in pregnant women with Type-2 diabetes.",
     imageURL: "https://picsum.photos/400/300?random=12",
     author: "Sifa Siraj",
     includesAI: true,
     includesEngineering: false,
     includesSI: false
- },
-  
- ];
-
-
-
-
-
-
+  },
+];
 
 
 

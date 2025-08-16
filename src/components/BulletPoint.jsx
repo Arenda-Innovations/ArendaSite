@@ -16,8 +16,8 @@ const BulletPoint = ({ text, color = 'blue' }) => {
 
   return (
     <li className="flex items-start space-x-3">
-      <span className={`${getColorClass()} text-xl mt-1`}>•</span>
-      <span>{text}</span>
+      <span className={`${getColorClass()} text-xl mt-1 flex-shrink-0`}>•</span>
+      <span className="break-words leading-relaxed">{text}</span>
     </li>
   );
 };

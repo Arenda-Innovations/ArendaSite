@@ -8,8 +8,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WhyArenda = () => {
   const boxesRef = useRef([]);
+  const titleRef = useRef(null);
 
   useEffect(() => {
+    // Animate title
+    gsap.fromTo(titleRef.current,
+      { opacity: 0, y: -30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        }
+      }
+    );
+
     // Animate boxes coming in from the side with staggered delays
     boxesRef.current.forEach((el, i) => {
       // Alternate between left and right side entry
@@ -116,7 +133,7 @@ const WhyArenda = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Title Section */}
-        <div className="text-center mb-20">
+        <div ref={titleRef} className="text-center mb-20">
           <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
             Why Arenda?
           </h2>
@@ -136,9 +153,10 @@ const WhyArenda = () => {
             />
           ))}
           
-          {/* Reach Out Now Box - Same shape as other boxes */}
-          <div className="md:col-span-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 p-4 rounded-xl
-            backdrop-blur-sm shadow-xl hover:shadow-[0_0_40px_rgba(107,114,128,0.4)] transition-all duration-500 cursor-pointer group">
+          {/* Reach Out Now Box - Full width on mobile, regular grid on desktop */}
+          <div className="col-span-2 md:col-span-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 p-4 md:p-6 rounded-xl
+            backdrop-blur-sm shadow-xl hover:shadow-[0_0_40px_rgba(107,114,128,0.4)] transition-all duration-500 cursor-pointer group
+            min-h-[400px] md:min-h-[300px]">
             <ReachOutNow />
           </div>
         </div>

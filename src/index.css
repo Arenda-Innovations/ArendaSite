@@ -173,3 +173,65 @@ canvas {
     @apply opacity-0 translate-y-[100px]
   }
 }
+
+
+
+.container img {
+  height: 100%;
+  width: 100%; /* Important for object-fit to work as expected */
+  object-fit: cover; /* or object-fit: contain; */
+}
+
+.parent
+{
+width:100%;
+background-color:Green;
+height:50px;
+text-align:center;
+font-size:24px;
+}
+.sub
+{
+width:50px;
+background-color:Red;
+height:50px;
+display: inline-block;
+}
+.img
+{
+vertical-align:middle;
+padding-top:15px;
+}
+
+
+#topbar{
+  display:block;
+  background-color : #29A329;
+  position: relative;
+  float: top;
+}
+#tobbar div{
+  height: 100%;
+  display:inline-block;
+}
+#networking{
+  padding-left:25%;
+}
+#networking div{
+  display:inline-block;
+}
+#title{
+  position: relative;
+  height:100%;
+  font-size: 24px;
+}
+#logo img{
+  width:100%;
+  display:block;
+  float:left;
+}
+#logo{
+  position: relative;
+  height: 100%;
+  padding-left:15px;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const PlaceholderImage = ({ 
-  emoji = "🖼️", 
-  text = "Image", 
-  subtext = "", 
+const PlaceholderImage = ({
+  emoji = "🖼️",
+  text = "Image",
+  subtext = "",
   className = "",
   size = "default",
   showBullets = false,
@@ -41,7 +41,7 @@ const PlaceholderImage = ({
           {subtext && <p className="text-xs opacity-50">{subtext}</p>}
         </div>
       </div>
-      
+
       {/* Bullet Points Overlay - Only show if showBullets is true */}
       {showBullets && bullets.length > 0 && (
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
