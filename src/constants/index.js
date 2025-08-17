@@ -6,7 +6,7 @@ import {
   highlightThirdVideo,
 } from "../utils";
 
-export const navLists = ["Home", "Projects", "A.I.", "Engineering","Social Impact", "Founders", "Contact"];
+export const navLists = ["Home", "Projects","Founders", "Contact"];
 
 export const navLinks = [
   { href: "#home", label: "Home" },
@@ -65,7 +65,7 @@ export const projects = [
     id: 1,
     title: "BlurOS",
     description: "A new operating system that is designed to be a more efficient and implement AI from its core",
-    imageURL: "https://picsum.photos/400/300?random=1",
+    imageURL: "https://media.tenor.com/Oyd3chopqr0AAAAe/vegeta-dragon-ball.png",
     author: "Arjun Paradkar, Nischal Keshav, Arham Shah",
     includesAI: true,
     includesEngineering: false,
@@ -75,7 +75,7 @@ export const projects = [
     id: 2,
     title: "BrAIn",
     description: "A novel AI architecture that is more efficient and cheaper than the current state of the art",
-    imageURL: "https://picsum.photos/400/300?random=2",
+    imageURL: "/assets/images/Bleach1.png",
     author: "Arjun Paradkar",
     includesAI: true,
     includesEngineering: true,
@@ -85,7 +85,7 @@ export const projects = [
     id: 3,
     title: "Allergy App",
     description: "A mobile app that utilizes AI to detect allergies through images and provide personalized recommendations for food and other products",
-    imageURL: "https://picsum.photos/400/300?random=3",
+    imageURL: "/assets/images/CSM1.png",
     author: "Arjun Paradkar, Satya Achanti, Nischal Keshav, Naman S. Guggilam",
     includesAI: true,
     includesEngineering: false,

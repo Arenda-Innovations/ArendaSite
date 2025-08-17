@@ -1,112 +1,132 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import gsap from 'gsap';
 
 const ProjectsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const dropdownMenuRef = useRef(null);
+  const navigate = useNavigate();
 
+  // GSAP animation for dropdown
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
+    if (dropdownMenuRef.current) {
+      if (isOpen) {
+        // Opening animation - sliding out from under navbar
+        gsap.fromTo(dropdownMenuRef.current, 
+          {
+            opacity: 0,
+            scaleY: 0,
+            transformOrigin: "top center"
+          },
+          {
+            opacity: 1,
+            scaleY: 1,
+            duration: 0.3,
+            ease: "power2.out"
+          }
+        );
       }
-    };
+    }
+  }, [isOpen]);
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  // Handle hover events
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
 
-  const projectCategories = [
+  const handleMouseLeave = () => {
+    if (isOpen && dropdownMenuRef.current) {
+      // Closing animation - sliding back under navbar
+      gsap.to(dropdownMenuRef.current, {
+        opacity: 0,
+        scaleY: 0,
+        duration: 0.2,
+        ease: "power2.in",
+        onComplete: () => setIsOpen(false)
+      });
+    } else {
+      setIsOpen(false);
+    }
+  };
+
+  const handleNavigation = (path) => {
+    if (dropdownMenuRef.current) {
+      // Animate out before navigation - sliding back up
+      gsap.to(dropdownMenuRef.current, {
+        opacity: 0,
+        y: -200,
+        z: 40,
+        duration: 0.3,
+        ease: "power2.in",
+        onComplete: () => {
+          navigate(path);
+          setIsOpen(false);
+        }
+      });
+    } else {
+      navigate(path);
+      setIsOpen(false);
+    }
+  };
+
+  // (no fixed-position recalculation needed)
+
+  const dropdownOptions = [
     {
-      name: "AI Projects",
-      description: "Artificial Intelligence & Machine Learning",
-      href: "/ai",
-      color: "from-blue-500 to-purple-600"
+      label: 'AI',
+      path: '/ai',
+      description: 'Artificial Intelligence Projects'
     },
     {
-      name: "Engineering",
-      description: "Hardware & Physical Systems",
-      href: "/engineering", 
-      color: "from-green-500 to-teal-600"
+      label: 'Engineering',
+      path: '/engineering',
+      description: 'Engineering Solutions'
     },
     {
-      name: "Social Impact",
-      description: "Healthcare & Community Solutions",
-      href: "/social-impact",
-      color: "from-orange-500 to-red-600"
+      label: 'Social Impact',
+      path: '/social-impact',
+      description: 'Social Impact Initiatives'
     }
   ];
 
-  return (
-    <div className="relative" ref={dropdownRef}>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all relative group"
-        onMouseEnter={() => setIsOpen(true)}
+    return (
+    <div 
+      className="relative hidden lg:block" 
+      ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Dropdown Trigger */}
+      <div
+        className="px-5 text-sm cursor-pointer text-gray-500 hover:text-white transition-all flex items-center space-x-1"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
       >
-        Projects
-        <svg 
-          className={`w-4 h-4 ml-1 inline transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
+        <span>Projects</span>
+      </div>
 
-      {/* Dropdown Menu */}
+      {/* Dropdown Menu (absolute under trigger) */}
       {isOpen && (
         <div 
-          className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-black/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50"
-          onMouseLeave={() => setIsOpen(false)}
+          ref={dropdownMenuRef}
+          className="absolute top-full left-0 w-32 bg-black backdrop-blur-sm border-gray-700/50 z-40 opacity-0"
+          style={{ paddingTop: '16px', height: '144px' }}
         >
-          <div className="p-4">
-            <div className="text-center mb-4">
-              <h3 className="text-lg font-semibold text-white mb-1">Our Projects</h3>
-              <p className="text-sm text-gray-400">Explore our innovative research areas</p>
-            </div>
-            
-            <div className="space-y-3">
-              {projectCategories.map((category, index) => (
-                <Link
-                  key={index}
-                  to={category.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block p-3 rounded-lg border border-gray-700 hover:border-gray-500 transition-all duration-200 hover:bg-gray-800/50 group"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.color}`}></div>
-                    <div className="flex-1">
-                      <h4 className="text-white font-medium group-hover:text-blue-400 transition-colors">
-                        {category.name}
-                      </h4>
-                      <p className="text-sm text-gray-400">{category.description}</p>
-                    </div>
-                    <svg 
-                      className="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-4 pt-4 border-t border-gray-700">
-              <Link
-                to="/research"
-                onClick={() => setIsOpen(false)}
-                className="block text-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+          <div className="flex flex-col" style={{ height: '128px' }}>
+            {dropdownOptions.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleNavigation(option.path)}
+                className="flex-1 text-left px-4 py-2 hover:bg-gray-800/50 transition-colors duration-200 group first:mt-lg "
               >
-                View All Research →
-              </Link>
-            </div>
+                <div className="flex flex-col justify-center h-full">
+                  <span className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200 text-sm">
+                    {option.label}
+                  </span>
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       )}

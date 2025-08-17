@@ -53,9 +53,8 @@ const ContactForm = () => {
   return (
     <div className="flex min-h-screen px-4 sm:px-8 py-8 sm:py-12 gap-6 sm:gap-8 bg-black overflow-y-auto">
       {/* Left - Form */}
-      
       <div className="w-full md:w-[48%] bg-white p-6 md:p-10 flex flex-col justify-center rounded-3xl shadow-xl">
-        <h2 className="text-3xl font-semibold text-black mb-6">Get in Touch</h2>
+        <h2 className="text-3xl font-semibold text-zinc-800 mb-6">Get in Touch</h2>
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label htmlFor="name" className="block mb-2 text-sm font-medium text-black">
