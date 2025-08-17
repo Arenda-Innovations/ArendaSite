@@ -6,7 +6,7 @@ import {
   highlightThirdVideo,
 } from "../utils";
 
-export const navLists = ["Home", "Projects","Founders", "Contact"];
+export const navLists = ["Home", "A.I.", "Engineering","Social Impact", "Founders", "Contact"];
 
 export const navLinks = [
   { href: "#home", label: "Home" },
@@ -65,7 +65,7 @@ export const projects = [
     id: 1,
     title: "BlurOS",
     description: "A new operating system that is designed to be a more efficient and implement AI from its core",
-    imageURL: "https://media.tenor.com/Oyd3chopqr0AAAAe/vegeta-dragon-ball.png",
+    imageURL: "https://picsum.photos/400/300?random=1",
     author: "Arjun Paradkar, Nischal Keshav, Arham Shah",
     includesAI: true,
     includesEngineering: false,
