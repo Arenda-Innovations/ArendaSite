@@ -6,13 +6,88 @@ import {
   highlightThirdVideo,
 } from "../utils";
 
-export const navLists = ["Home", "A.I.", "Engineering","Social Impact", "Founders", "Contact"];
+export const navLists = ["Home", "Projects", "Founders", "Contact"];
 
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#tech", label: "Tech" },
   { href: "#physical", label: "Physical" },
   { href: "#contact", label: "Contact" },
+];
+
+export const whyArendaReasons = [
+  {
+    title: "Innovation First",
+    image: "/assets/images/placeholder1.jpg",
+    bullets: [
+      "Cutting-edge research projects",
+      "Breakthrough technologies",
+      "Future-focused solutions"
+    ],
+    color: "from-gray-500/20 to-gray-600/20",
+    borderColor: "border-gray-400/30",
+    rotation: "rotate-3"
+  },
+  {
+    title: "Student Driven",
+    image: "/assets/images/placeholder2.jpg",
+    bullets: [
+      "Youth-led initiatives",
+      "Student research teams",
+      "Peer-to-peer learning"
+    ],
+    color: "from-gray-500/20 to-gray-600/20",
+    borderColor: "border-gray-400/30",
+    rotation: "-rotate-2"
+  },
+  {
+    title: "Community Impact",
+    image: "/assets/images/placeholder3.jpg",
+    bullets: [
+      "Local problem solving",
+      "Community partnerships",
+      "Real-world applications"
+    ],
+    color: "from-gray-500/20 to-gray-600/20",
+    borderColor: "border-gray-400/30",
+    rotation: "rotate-1"
+  },
+  {
+    title: "Excellence Focus",
+    image: "/assets/images/placeholder4.jpg",
+    bullets: [
+      "High standards",
+      "Quality assurance",
+      "Continuous improvement"
+    ],
+    color: "from-gray-500/20 to-gray-600/20",
+    borderColor: "border-gray-400/30",
+    rotation: "-rotate-1"
+  },
+  {
+    title: "Global Vision",
+    image: "/assets/images/placeholder5.jpg",
+    bullets: [
+      "International reach",
+      "Cross-cultural collaboration",
+      "Worldwide impact"
+    ],
+    color: "from-gray-500/20 to-gray-600/20",
+    borderColor: "border-gray-400/30",
+    rotation: "rotate-2"
+  },
+  {
+    title: "Future Ready",
+    image: "/assets/images/placeholder6.jpg",
+    bullets: [
+      "Next-gen skills",
+      "Emerging technologies",
+      "Adaptive learning"
+    ],
+    color: "from-gray-500/20 to-gray-600/20",
+    borderColor: "border-gray-400/30",
+    rotation: "-rotate-3"
+  }
 ];
 
 export const hightlightsSlides = [
@@ -75,7 +150,7 @@ export const projects = [
     id: 2,
     title: "BrAIn",
     description: "A novel AI architecture that is more efficient and cheaper than the current state of the art",
-    imageURL: "/assets/images/Bleach1.png",
+    imageURL: "https://picsum.photos/400/300?random=2",
     author: "Arjun Paradkar",
     includesAI: true,
     includesEngineering: true,
@@ -85,7 +160,7 @@ export const projects = [
     id: 3,
     title: "Allergy App",
     description: "A mobile app that utilizes AI to detect allergies through images and provide personalized recommendations for food and other products",
-    imageURL: "/assets/images/CSM1.png",
+    imageURL: "https://picsum.photos/400/300?random=4",
     author: "Arjun Paradkar, Satya Achanti, Nischal Keshav, Naman S. Guggilam",
     includesAI: true,
     includesEngineering: false,

@@ -48,9 +48,7 @@ const BeltOfCollabs = () => {
                                     display: 'block',
                                 }}
                             />
-                            <div className="text-white text-sm mt-2 font-medium opacity-80">
-                                {partner.name}
-                            </div>
+                            
                         </div>
                     ))}
                 </div>

@@ -12,7 +12,7 @@ const ProjectsDropdown = () => {
   useEffect(() => {
     if (dropdownMenuRef.current) {
       if (isOpen) {
-        // Opening animation - sliding out from under navbar
+        // Opening animation
         gsap.fromTo(dropdownMenuRef.current, 
           {
             opacity: 0,
@@ -118,13 +118,11 @@ const ProjectsDropdown = () => {
               <button
                 key={index}
                 onClick={() => handleNavigation(option.path)}
-                className="flex-1 text-left px-4 py-2 hover:bg-gray-800/50 transition-colors duration-200 group first:mt-lg "
+                className="w-full text-left px-4 py-3 hover:bg-gray-800/50 transition-colors duration-200 group first:rounded-t-lg last:rounded-b-lg"
               >
-                <div className="flex flex-col justify-center h-full">
-                  <span className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200 text-sm">
-                    {option.label}
-                  </span>
-                </div>
+                <span className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200 text-sm">
+                  {option.label}
+                </span>
               </button>
             ))}
           </div>

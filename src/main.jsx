@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
-
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
-  dsn: import.meta.env.VITE_SENTRY_DSN || "https://cf8eca408a0d6e210687e6fcb1f4b456@o4509802634608640.ingest.us.sentry.io/4509802639523840",
+  dsn: import.meta.env.VITE_SENTRY_DSN ,
   integrations: [
     Sentry.browserTracingIntegration(),
     Sentry.metrics.metricsAggregatorIntegration(),

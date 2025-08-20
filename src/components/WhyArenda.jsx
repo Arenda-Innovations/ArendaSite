@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import WhyArendaBox from './WhyArendaBox';
 import ReachOutNow from './ReachOutNow';
+import { whyArendaReasons } from '../constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,83 +35,11 @@ const WhyArenda = () => {
     });
   }, []);
 
-  const whyArendaReasons = [
-    {
-      title: "Innovation First",
-      image: "/assets/images/placeholder1.jpg",
-      bullets: [
-        "Cutting-edge research projects",
-        "Breakthrough technologies",
-        "Future-focused solutions"
-      ],
-      color: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-400/30",
-      rotation: "rotate-3"
-    },
-    {
-      title: "Student Driven",
-      image: "/assets/images/placeholder2.jpg",
-      bullets: [
-        "Youth-led initiatives",
-        "Student research teams",
-        "Peer-to-peer learning"
-      ],
-      color: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-400/30",
-      rotation: "-rotate-2"
-    },
-    {
-      title: "Community Impact",
-      image: "/assets/images/placeholder3.jpg",
-      bullets: [
-        "Local problem solving",
-        "Community partnerships",
-        "Real-world applications"
-      ],
-      color: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-400/30",
-      rotation: "rotate-1"
-    },
-    {
-      title: "Excellence Focus",
-      image: "/assets/images/placeholder4.jpg",
-      bullets: [
-        "High standards",
-        "Quality assurance",
-        "Continuous improvement"
-      ],
-      color: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-400/30",
-      rotation: "-rotate-1"
-    },
-    {
-      title: "Global Vision",
-      image: "/assets/images/placeholder5.jpg",
-      bullets: [
-        "International reach",
-        "Cross-cultural collaboration",
-        "Worldwide impact"
-      ],
-      color: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-400/30",
-      rotation: "rotate-2"
-    },
-    {
-      title: "Future Ready",
-      image: "/assets/images/placeholder6.jpg",
-      bullets: [
-        "Next-gen skills",
-        "Emerging technologies",
-        "Adaptive learning"
-      ],
-      color: "from-gray-500/20 to-gray-600/20",
-      borderColor: "border-gray-400/30",
-      rotation: "-rotate-3"
-    }
-  ];
-
   return (
-    <section className="bg-black text-white py-24 px-6 md:px-12 relative overflow-hidden" id="why-arenda">
+    <section 
+      className="bg-black text-white min-h-screen px-8 md:px-16 relative overflow-hidden flex items-center" 
+      id="why-arenda"
+    >
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-black to-blue-900/20"></div>
 
@@ -124,7 +53,7 @@ const WhyArenda = () => {
         </div>
 
         {/* Complex Grid Layout */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {whyArendaReasons.map((reason, index) => (
             <WhyArendaBox
               key={index}
@@ -136,9 +65,10 @@ const WhyArenda = () => {
             />
           ))}
           
-          {/* Reach Out Now Box - Same shape as other boxes */}
-          <div className="md:col-span-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 p-4 rounded-xl
-            backdrop-blur-sm shadow-xl hover:shadow-[0_0_40px_rgba(107,114,128,0.4)] transition-all duration-500 cursor-pointer group">
+          {/* Reach Out Now Box - Fixed Height */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-2 bg-gradient-to-br from-gray-500/20 to-gray-600/20 p-4 rounded-xl
+  backdrop-blur-sm shadow-xl hover:shadow-[0_0_40px_rgba(107,114,128,0.4)] transition-all duration-500 cursor-pointer group 
+  h-[520px] w-full flex items-center justify-center">
             <ReachOutNow />
           </div>
         </div>
@@ -148,3 +78,4 @@ const WhyArenda = () => {
 };
 
 export default WhyArenda;
+

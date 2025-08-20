@@ -1,11 +1,11 @@
 import { navLists } from '../constants';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import ProjectsDropdown from './ProjectsDropdown';
 
 const Navbar = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
 
   useEffect(() => {
     const root = document.documentElement;
@@ -52,25 +52,25 @@ const Navbar = () => {
           <div className={classes}>{nav}</div>
         </Link>
       );
-    } else if (nav === "A.I.") {
-      return (
-        <Link to="/ai" onClick={closeMobileMenu}>
-          <div className={classes}>{nav}</div>
-        </Link>
+    } else if (nav === "Projects") {
+      return isMobile ? (
+        <div className="px-8 py-4 text-lg text-gray-500 border-b border-gray-700 last:border-b-0">
+          <div className="mb-3">Projects</div>
+          <div className="space-y-2 ml-4">
+            <Link to="/ai" onClick={closeMobileMenu} className="block text-sm text-gray-400 hover:text-white transition-colors">
+              AI
+            </Link>
+            <Link to="/engineering" onClick={closeMobileMenu} className="block text-sm text-gray-400 hover:text-white transition-colors">
+              Engineering
+            </Link>
+            <Link to="/social-impact" onClick={closeMobileMenu} className="block text-sm text-gray-400 hover:text-white transition-colors">
+              Social Impact
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <ProjectsDropdown />
       );
-    } else if (nav === "Engineering") {
-      return (
-        <Link to="/engineering" onClick={closeMobileMenu}>
-          <div className={classes}>{nav}</div>
-        </Link>
-      );
-    } else if (nav === "Social Impact") {
-      return (
-        <Link to="/social-impact" onClick={closeMobileMenu}>
-          <div className={classes}>{nav}</div>
-        </Link>
-      );
-
     } else {
       return (
         <a href={`#${nav.toLowerCase()}`} onClick={closeMobileMenu}>
