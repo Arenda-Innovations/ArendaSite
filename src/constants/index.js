@@ -6,7 +6,7 @@ import {
   highlightThirdVideo,
 } from "../utils";
 
-export const navLists = ["Home", "Projects", "Founders", "Contact"];
+export const navLists = ["Home", "AI", "Engineering", "Social Impact", "Founders", "Contact"];
 
 export const navLinks = [
   { href: "#home", label: "Home" },

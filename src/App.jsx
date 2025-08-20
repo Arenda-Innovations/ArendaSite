@@ -25,7 +25,7 @@ const App = () => {
           <>
             <Hero/>
             <ResearchPage/>
-            <BeltOfCollabs/>
+            {/* <BeltOfCollabs/> */}
             <WhyArenda/>
             <CommitmentToArkansas/>
             

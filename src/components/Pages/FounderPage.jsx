@@ -5,40 +5,49 @@ const FounderPage = () => {
   const [firstFounder, ...otherFounders] = founders;
   
   return (
-    <div className="min-h-screen bg-black pt-20 px-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-black pt-20">
+      <div className="max-w-6xl mx-auto px-8">
         <h1 className="text-4xl font-bold text-white text-center mb-12">
           Our Founders
         </h1>
-        
-        {/* First Founder */}
-        <FounderProfile
-          key={firstFounder.id}
-          name={firstFounder.name}
-          title={firstFounder.title}
-          description={firstFounder.description}
-          imageUrl={firstFounder.imageUrl}
-          orientation={firstFounder.orientation}
-          className="mb-16"
-        />
-        
-       
-        <h2 className="text-4xl font-bold text-white text-center mb-12 mt-20">
+      </div>
+      
+      {/* Founders Section with Full Screen Gradient */}
+      <div className="bg-gradient-to-br from-blue-900/30 via-purple-900/20 to-indigo-900/30 py-12 mb-20">
+        <div className="max-w-6xl mx-auto px-8">
+          <FounderProfile
+            key={firstFounder.id}
+            name={firstFounder.name}
+            title={firstFounder.title}
+            description={firstFounder.description}
+            imageUrl={firstFounder.imageUrl}
+            orientation={firstFounder.orientation}
+            className="mb-8"
+          />
+        </div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-8">
+        <h2 className="text-4xl font-bold text-white text-center mb-12">
           Other Faculty
         </h2>
-        
-        {/* Other Founders */}
-        {otherFounders.map((founder) => (
-          <FounderProfile
-            key={founder.id}
-            name={founder.name}
-            title={founder.title}
-            description={founder.description}
-            imageUrl={founder.imageUrl}
-            orientation={founder.orientation}
-            className="mb-16"
-          />
-        ))}
+      </div>
+      
+      {/* Faculty Section with Full Screen Gradient */}
+      <div >
+        <div className="max-w-6xl mx-auto px-8">
+          {otherFounders.map((founder) => (
+            <FounderProfile
+              key={founder.id}
+              name={founder.name}
+              title={founder.title}
+              description={founder.description}
+              imageUrl={founder.imageUrl}
+              orientation={founder.orientation}
+              className="mb-16 last:mb-8"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const Navbar = () => {
   useEffect(() => {
     const root = document.documentElement;
     if (isMobileMenuOpen) {
-      root.style.setProperty('--navbar-height', '24rem');
+      root.style.setProperty('--navbar-height', '32rem');
     } else {
       root.style.setProperty('--navbar-height', '5rem');
     }
@@ -52,24 +52,23 @@ const Navbar = () => {
           <div className={classes}>{nav}</div>
         </Link>
       );
-    } else if (nav === "Projects") {
-      return isMobile ? (
-        <div className="px-8 py-4 text-lg text-gray-500 border-b border-gray-700 last:border-b-0">
-          <div className="mb-3">Projects</div>
-          <div className="space-y-2 ml-4">
-            <Link to="/ai" onClick={closeMobileMenu} className="block text-sm text-gray-400 hover:text-white transition-colors">
-              AI
-            </Link>
-            <Link to="/engineering" onClick={closeMobileMenu} className="block text-sm text-gray-400 hover:text-white transition-colors">
-              Engineering
-            </Link>
-            <Link to="/social-impact" onClick={closeMobileMenu} className="block text-sm text-gray-400 hover:text-white transition-colors">
-              Social Impact
-            </Link>
-          </div>
-        </div>
-      ) : (
-        <ProjectsDropdown />
+    } else if (nav === "AI") {
+      return (
+        <Link to="/ai" onClick={closeMobileMenu}>
+          <div className={classes}>{nav}</div>
+        </Link>
+      );
+    } else if (nav === "Engineering") {
+      return (
+        <Link to="/engineering" onClick={closeMobileMenu}>
+          <div className={classes}>{nav}</div>
+        </Link>
+      );
+    } else if (nav === "Social Impact") {
+      return (
+        <Link to="/social-impact" onClick={closeMobileMenu}>
+          <div className={classes}>{nav}</div>
+        </Link>
       );
     } else {
       return (
@@ -92,9 +91,9 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="flex flex-1 justify-center max-sm:hidden">
-          {navLists.map((nav) => (
+          {["Home", "Projects", "Founders", "Contact"].map((nav) => (
             <div key={nav}>
-              {renderNavLink(nav, false)}
+              {nav === "Projects" ? <ProjectsDropdown /> : renderNavLink(nav, false)}
             </div>
           ))}
         </div>
