@@ -70,7 +70,7 @@ const ProjectsDropdown = () => {
     }
   };
 
-  // (no fixed-position recalculation needed)
+ 
 
   const dropdownOptions = [
     {
@@ -110,8 +110,8 @@ const ProjectsDropdown = () => {
       {isOpen && (
         <div 
           ref={dropdownMenuRef}
-          className="absolute top-full left-0 w-32 bg-black backdrop-blur-sm border-gray-700/50 z-40 opacity-0"
-          style={{ paddingTop: '16px', height: '144px' }}
+          className="absolute top-full left-0 w-32 bg-black backdrop-blur-sm border-gray-700/50 z-40 opacity-0 border-b-r-lg"
+          style={{ paddingTop: '16px', height: '160px' }}
         >
           <div className="flex flex-col" style={{ height: '128px' }}>
             {dropdownOptions.map((option, index) => (
@@ -120,7 +120,7 @@ const ProjectsDropdown = () => {
                 onClick={() => handleNavigation(option.path)}
                 className="w-full text-left px-4 py-3 hover:bg-gray-800/50 transition-colors duration-200 group first:rounded-t-lg last:rounded-b-lg"
               >
-                <span className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200 text-sm">
+                <span className="text-white m font-medium transition-colors duration-200 text-sm group-hover:text-blue-400 ">
                   {option.label}
                 </span>
               </button>

@@ -6,13 +6,15 @@ import {
   highlightThirdVideo,
 } from "../utils";
 
-export const navLists = ["Home", "AI", "Engineering", "Social Impact", "Founders", "Contact"];
+export const navLists = ["Home","Labs", "AI", "Engineering", "Social Impact", "Founders", "Contact"];
 
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#tech", label: "Tech" },
   { href: "#physical", label: "Physical" },
   { href: "#contact", label: "Contact" },
+  { href: "/labs", label: "Labs" },
+  
 ];
 
 export const whyArendaReasons = [

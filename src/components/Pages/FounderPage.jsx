@@ -2,7 +2,7 @@ import FounderProfile from '../FounderProfile';
 import { founders } from '../../constants';
 
 const FounderPage = () => {
-  const [firstFounder, ...otherFounders] = founders;
+  const [firstFounder,secondFounder, ...otherFounders] = founders;
   
   return (
     <div className="min-h-screen bg-black pt-20">
@@ -24,12 +24,21 @@ const FounderPage = () => {
             orientation={firstFounder.orientation}
             className="mb-8"
           />
+          <FounderProfile
+            key={secondFounder.id}
+            name={secondFounder.name}
+            title={secondFounder.title}
+            description={secondFounder.description}
+            imageUrl={secondFounder.imageUrl}
+            orientation={secondFounder.orientation}
+            className="mb-8"
+          />
         </div>
       </div>
       
       <div className="max-w-6xl mx-auto px-8">
         <h2 className="text-4xl font-bold text-white text-center mb-12">
-          Other Faculty
+          Faculty
         </h2>
       </div>
       

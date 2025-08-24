@@ -15,6 +15,7 @@ import SocialImpactPage from './components/Pages/SocialImpactPage';
 import DevelopmentBanner from './components/DevelopmentBanner';
 import CommitmentToArkansas from './components/CommitmentToArkansas';
 import WhyArenda from './components/WhyArenda';
+import LabsPage1 from './components/Pages/LabsPage1';
 const App = () => {
   return (
     <div className="scroll-smooth">
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/ai" element={<AIPage />} />
         <Route path="/engineering" element={<EngineeringPage />} />
         <Route path="/social-impact" element={<SocialImpactPage />} />
+        <Route path="/labs" element={<LabsPage1 />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer/>

@@ -70,6 +70,12 @@ const Navbar = () => {
           <div className={classes}>{nav}</div>
         </Link>
       );
+    } else if (nav === "Labs") {
+      return (
+        <Link to="/labs" onClick={closeMobileMenu}>
+          <div className={classes}>{nav}</div>
+        </Link>
+      );
     } else {
       return (
         <a href={`#${nav.toLowerCase()}`} onClick={closeMobileMenu}>
@@ -91,7 +97,7 @@ const Navbar = () => {
         
         {/* Desktop Navigation */}
         <div className="flex flex-1 justify-center max-sm:hidden">
-          {["Home", "Projects", "Founders", "Contact"].map((nav) => (
+          {["Home", "Projects","Labs", "Founders", "Contact"].map((nav) => (
             <div key={nav}>
               {nav === "Projects" ? <ProjectsDropdown /> : renderNavLink(nav, false)}
             </div>
