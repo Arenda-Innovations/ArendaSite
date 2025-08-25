@@ -16,6 +16,8 @@ export const frameVideo = "https://f005.backblazeb2.com/file/PublicArendaAssets/
 export const pauseImg = ArendaLogo;//replace these images with 
 export const playImg = ArendaLogo;
 export const replayImg = ArendaLogo; 
+export const labsHeroImg = "https://media.istockphoto.com/id/1214111460/photo/in-industrial-robot-desing-research-laboratory-robotic-arm-prototype-standing-illuminated-on.jpg?s=612x612&w=0&k=20&c=rRcY12tvZ_yH8XAH5VKBNw4Pmw8jQTYA3LHWYeKraGU=";
+
 
 
 //import smallmv from "/assets/videos/smallHero.mp4";

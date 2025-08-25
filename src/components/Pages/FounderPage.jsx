@@ -14,7 +14,7 @@ const FounderPage = () => {
       
       {/* Founders Section with Full Screen Gradient */}
       <div className="bg-gradient-to-br from-blue-900/30 via-purple-900/20 to-indigo-900/30 py-12 mb-20">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full px-8">
           <FounderProfile
             key={firstFounder.id}
             name={firstFounder.name}
@@ -44,7 +44,7 @@ const FounderPage = () => {
       
       {/* Faculty Section with Full Screen Gradient */}
       <div >
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="w-full px-8">
           {otherFounders.map((founder) => (
             <FounderProfile
               key={founder.id}

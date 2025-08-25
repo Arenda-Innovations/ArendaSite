@@ -19,7 +19,7 @@ import LabsPage1 from './components/Pages/LabsPage1';
 const App = () => {
   return (
     <div className="scroll-smooth">
-      <DevelopmentBanner />
+      {/*<DevelopmentBanner />*/}
       <Navbar />
       <Routes>
         <Route path="/" element={

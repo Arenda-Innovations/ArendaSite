@@ -1,9 +1,14 @@
 import React from "react";
-
+import Hero from "../LabsComponents/LabHero";
+import BracketHeader from "../LabsComponents/BracketHeader";
+import WhyLabs from "../LabsComponents/WhyLabs";
+import "./LabsPage1.css";
 const LabsPage1 = () => {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-white text-center">Labs Page 1</h1>
+    <div className="labs-page">
+      <Hero/>
+      
+      <WhyLabs />
     </div>
   );
 };
