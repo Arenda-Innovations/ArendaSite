@@ -15,10 +15,10 @@ const Hero = () => {
         <div id="hero-txt" className="centered">
             <img src="/assets/images/Herotxt.png"></img>
         </div>
-        <div className="bottom-right flex items-center max-w-[30%] mr-4">
-          <LeftBracket resize={1.8} />
+        <div className="bottom-right flex items-center max-w-[30%] mr-4 ">
+          <LeftBracket className="hidden md:block" resize={1.8} />
               <h1 className="text-white text-xl font-bold ml-1 -mr-3 text-left"> Student Lead Orginization developing projects that change the world </h1>
-          <RightBracket resize={1.8}/>
+          <RightBracket className="hidden md:block" resize={1.8}/>
         </div>
       </div>
     </div>

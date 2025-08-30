@@ -1,14 +1,19 @@
 import React from "react";
 import Hero from "../LabsComponents/LabHero";
-import BracketHeader from "../LabsComponents/BracketHeader";
 import WhyLabs from "../LabsComponents/WhyLabs";
+import ProjectsInDevelopment from "../LabsComponents/Projectsindevelopment";
+import UpcomingEvents from "../LabsComponents/UpcomingEvents";
+import HowToJoin from "../LabsComponents/HowToJoin";
 import "./LabsPage1.css";
 const LabsPage1 = () => {
   return (
     <div className="labs-page">
       <Hero/>
-      
+
       <WhyLabs />
+      <HowToJoin/>
+      <UpcomingEvents/>
+
     </div>
   );
 };
