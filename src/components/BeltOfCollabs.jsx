@@ -4,12 +4,12 @@ import React from 'react';
 
 const BeltOfCollabs = () => {
     const partners = [
-        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Replace with actual UCA logo when available
+        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, 
         { name: 'Stoodive', logo: '/assets/images/Stoodive.png' },
-        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Duplicate for seamless loop
-        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' }, // Duplicate for seamless loop
-        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, // Third instance
-        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' }, // Third instance
+        { name: 'UCA', logo: '/assets/images/UCALogo.png' }, 
+        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' }, 
+        { name: 'UCA', logo: '/assets/images/UCALogo.png' },
+        { name: 'Stoodive', logo: '/assets/images/Stoodive.png' }, 
     ];
     return (
         <>

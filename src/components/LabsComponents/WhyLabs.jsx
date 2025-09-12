@@ -7,11 +7,14 @@ import { useGSAP } from '@gsap/react';
 
 const WhyLabs = (className) => {
   useGSAP(() => {
-    gsap.from('#selected-text', {
-      color: '#FFD700',
-      duration: 1,
-    })
-  })
+  gsap.to('#selected-text', {
+    rotation: 5,    
+    yoyo: true,
+    repeat: 4,
+    duration: 0.2,
+    ease: "easeInOut"
+  });
+});
 
   return (
     <div className={className}>
@@ -20,8 +23,8 @@ const WhyLabs = (className) => {
 
       <div className="clear-both flex items-start gap-8 mt-10">
       
-        <p className="text-white satoshi-light w-[60%] ml-[4%] text-5xl transform">
-          Maecenas maximus nunc dui, <span id="selected-text" className="satoshi-medium">sed laoreet</span> augue laoreet et. 
+        <p className="text-white satoshi-light w-[60%] ml-[4%] text-5xl transform leading-[1.5]">
+          Arenda Labs is a student-led research organization dedicated to pushing the boundaries of <span id="selected-text" className="satoshi-medium">science</span> and <span id='selected-text' className="satoshi-medium">technology</span>. 
         </p>
         <img 
           src="/assets/images/ArendaGroup1.jpg" 

@@ -295,7 +295,7 @@ export const founders = [
     id: 4,
     name: "Naman S. Guggilam",
     title: "Head of Research",
-    description: "Naman co-founded ARENDA Innovations with a mission to push the boundaries of science and technology. A physicist and neuroscientist in training, he explores questions that bridge the fundamental laws of the universe with the complexities of the human brain. His current focus is on pioneering the discovery of novel non-coding RNA biomarkers for Alzheimer’s disease — blending advanced machine learning with deep biological insight to enable earlier detection and intervention. Through ARENDA, Naman works to create technologies that unite the precision of physics, the power of AI, and the promise of biology to shape the future of human health and intelligence.",
+    description: "Naman Guggilam is a BHS student passionate about Theoretical Physics. He is very ambitious and is intensely driven by curiosity. He thrives on self-study, exploring any subject (mainly physics) that fuels his ambition.  Naman believes that reaching great goals requires intense hard work, discipline, and determination, and he values knowledge as the key to transformation.",
     imageUrl: "/assets/images/Naman1.png",
     orientation: "right"
   },
@@ -316,5 +316,48 @@ export const founders = [
     description: "My name is Aaroosh Davalbhakta, and I am a senior at Haas Hall Academy Bentonville. I am looking to pursue a career in Chemical Engineering.",
     imageUrl: "/assets/images/Aaroosh1.jpeg",
     orientation: "right"
+  }
+];
+
+export const upcomingEvents = [
+  {
+    id: 1,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
+  },
+  {
+    id: 2,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
+  },
+  {
+    id: 3,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
   }
 ];

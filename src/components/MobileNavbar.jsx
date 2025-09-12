@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 
 const MobileNavbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Mobile navigation includes project categories as regular nav items
+  const mobileNavLists = ["Home", "AI", "Engineering", "Social Impact", "Labs", "Founders", "Contact"];
 
   useEffect(() => {
     const root = document.documentElement;
@@ -81,10 +84,10 @@ const MobileNavbar = () => {
   };
 
   return (
-    <>
+    <div className="sm:hidden relative">
       {/* Mobile Menu Button */}
       <button
-        className="sm:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 z-50 relative"
+        className="flex flex-col justify-center items-center w-8 h-8 space-y-1 z-50 relative"
         onClick={toggleMobileMenu}
         aria-label="Toggle mobile menu"
         aria-expanded={isMobileMenuOpen}
@@ -98,22 +101,25 @@ const MobileNavbar = () => {
       {/* Mobile Menu Dropdown */}
       <div 
         id="mobile-menu"
-        className={`sm:hidden overflow-hidden transition-all duration-300 bg-black/95 backdrop-blur-md ${
-          isMobileMenuOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'
+        className={`sm:hidden absolute top-12 right-0 w-screen overflow-hidden transition-all duration-300 bg-black/95 backdrop-blur-md shadow-lg ${
+          isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
+        style={{
+          transform: 'translateX(calc(-100vw + 100%))'
+        }}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation menu"
       >
         <div className="flex flex-col items-center justify-start space-y-0 w-full">
-          {navLists.map((nav) => (
+          {mobileNavLists.map((nav) => (
             <div key={nav} className="w-full text-center">
               {renderNavLink(nav)}
             </div>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
