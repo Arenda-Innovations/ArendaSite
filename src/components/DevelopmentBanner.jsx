@@ -6,7 +6,7 @@ const DevelopmentBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black py-3 px-4 relative z-50">
+    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black py-3 px-4 relative z-10">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <svg 
@@ -17,7 +17,7 @@ const DevelopmentBanner = () => {
             
           </svg>
           <span className="text-sm font-medium">
-             Website in Development - Changes are expected and information may be incorrect or out of date. Build v.1.0.14
+             Website in Development - Changes are expected and information may be incorrect or out of date. Build v.1.1.01
           </span>
         </div>
         <button
