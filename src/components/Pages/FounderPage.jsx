@@ -36,13 +36,12 @@ const FounderPage = () => {
         </div>
       </div>
       
-      <div className="max-w-6xl mx-auto px-8">
+     {/* <div className="max-w-6xl mx-auto px-8">
         <h2 className="text-4xl font-bold text-white text-center mb-12">
-          Faculty
+          
         </h2>
-      </div>
-      
-      {/* Faculty Section with Full Screen Gradient */}
+      </div>*/}
+    
       <div >
         <div className="w-full px-8">
           {otherFounders.map((founder) => (

@@ -282,39 +282,66 @@ export const founders = [
     imageUrl: "/assets/images/ArjunP1.jpg",
     orientation: "right"
   },
+   
   
   {
     id: 3,
     name: "Nischal Keshav",
-    title: "Head of Technology",
+    title: "Head of Arenda Labs",
     description: "Nischal Keshav is the Technical Lead at Arenda Innovations and built this website. He is a Junior at Bentonville High School and is interested in pursuing a career in Computer Science. He is also a Founder of the ISEF club at Bentonville High School.",
     imageUrl: "/assets/images/Nischal1.jpg",
     orientation: "left"
   },
-  {
+ {
     id: 4,
     name: "Naman S. Guggilam",
-    title: "Head of Research",
-    description: "Naman co-founded ARENDA Innovations with a mission to push the boundaries of science and technology. A physicist and neuroscientist in training, he explores questions that bridge the fundamental laws of the universe with the complexities of the human brain. His current focus is on pioneering the discovery of novel non-coding RNA biomarkers for Alzheimer’s disease — blending advanced machine learning with deep biological insight to enable earlier detection and intervention. Through ARENDA, Naman works to create technologies that unite the precision of physics, the power of AI, and the promise of biology to shape the future of human health and intelligence.",
+    title: "Head of Arenda Vision",
+    description: "Naman Guggilam is a BHS student passionate about Theoretical Physics. He is very ambitious and is intensely driven by curiosity. He thrives on self-study, exploring any subject (mainly physics) that fuels his ambition.  Naman believes that reaching great goals requires intense hard work, discipline, and determination, and he values knowledge as the key to transformation.",
     imageUrl: "/assets/images/Naman1.png",
     orientation: "right"
   },
+ 
+];
+
+export const upcomingEvents = [
   {
-    id: 5,
-    name: "Satya Achanti",
-    title: "Chief Scientific Officer",
-    description: "Satya Achanti is a sophomore at Bentonville High School interested in medicine and want to pursue being a neurologist as his career. He loves math and science.",
-    imageUrl: "/assets/images/Satya1.jpg",
-    orientation: "left"
+    id: 1,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
   },
-  
-  
   {
-    id: 6,
-    name: "Aaroosh Davalbhakta",
-    title: "ARENDA Mentor",
-    description: "My name is Aaroosh Davalbhakta, and I am a senior at Haas Hall Academy Bentonville. I am looking to pursue a career in Chemical Engineering.",
-    imageUrl: "/assets/images/Aaroosh1.jpeg",
-    orientation: "right"
+    id: 2,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
+  },
+  {
+    id: 3,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "Coming Soon",
+    date: "Coming Soon",
+    time: "Coming Soon",
+    location: "Coming Soon",
+    description: "Coming Soon",
+    type: "Coming Soon",
+    featured: false
   }
 ];

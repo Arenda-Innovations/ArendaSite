@@ -11,7 +11,7 @@ const LabsPage1 = () => {
       <Hero/>
 
       <WhyLabs />
-      <HowToJoin/>
+      
       <UpcomingEvents/>
 
     </div>

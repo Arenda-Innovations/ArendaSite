@@ -1,7 +1,7 @@
-export const scriptURL =
+export const scriptURLPrimary =
   'https://script.google.com/macros/s/AKfycbyUQ_pKUyA5Orm6TZk9fkKxULa7frC0UI3pIopFoDkj3DwWajqM3F-DHsF7CA4ZrkHi/exec';
 
-export async function submitContactToAppsScript({ name, email, subject, message }) {
+export async function submitContactToAppsScript({ name, email, subject, message },scriptURL=scriptURLPrimary) {
   const params = new URLSearchParams();
   params.set('name', name || '');
   params.set('email', email || '');
